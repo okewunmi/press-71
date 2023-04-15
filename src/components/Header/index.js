@@ -12,6 +12,7 @@ import photo2 from "../../assets/img-2.jpeg";
 import photo3 from "../../assets/img-3.jpeg";
 import photo4 from "../../assets/img-4.jpg";
 import photo5 from "../../assets/preniun.jpg";
+import Spinner from "../Spinner";
 //const Api_Key = "8hm6temfzaJ10LpoVS5fpArANkGmFBxOkE2zKbw9";
 const api_key = `?apikey=${process.env.REACT_APP_API_KEY}`;
 
@@ -23,7 +24,7 @@ const tempUrl =
 const Header = () => {
   const [news, setNews] = useState({});
   const [buttonValues, setButtonsValues] = useState([]);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState([]);
   // const [index, setIndex] = useState(0);
@@ -32,14 +33,12 @@ const Header = () => {
   const btnfetch = async (value) => {
     const reponse = await fetch(`${tempUrl}&category=${value}`);
     const data = await reponse.json();
-    console.log(data.results);
     setNews(data.results[0]);
-    setError(false);
     setButtonsValues((prevValues) => [...prevValues, value]);
   };
   const searchBtn = async (e) => {
-    console.log("searching.......");
     e.preventDefault();
+    setLoading(true);
     const reponse = await fetch(
       `https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&q=${searchTerm}`
     );
@@ -193,44 +192,51 @@ const Header = () => {
           </div>
         </div>
         <div className="Premium">
-          {search.map((index) => {
-            const { link, pubDate, title, image_url, source_id } = index;
-            const dateString = pubDate;
-            const newObject = new Date(dateString);
-            const minute = newObject.getHours();
-            const hourFormated = minute.toString().padStart(2, "0");
-            return (
-              <article className="Premium__box" key={source_id}>
-                <div className="Premium__img--box">
-                  <div className="Premium__img--circle">
-                    <p>2</p>
-                  </div>
-                  <img
-                    src={image_url ? image_url : photo5}
-                    alt="imageurl"
-                    className="Premium__img"
-                  />
-                </div>
+          {loading && <Spinner />}
+          {search.map((items, index) => {
+            const { link, pubDate, title, image_url, source_id } = items;
+            const newObject = new Date(pubDate);
+            const hourFormated = newObject.toLocaleString("en-US", {
+              hour: "numeric",
+              minute: "numeric",
+              hour12: true,
+            });
 
-                <div className="Premium__content">
-                  <div className="Premium__time">
-                    <p className="grey">recent post</p>
-                    <p className="blue-grey">{hourFormated} pm</p>
+            return (
+              <section>
+                <article className="Premium__box" key={source_id}>
+                  <div className="Premium__img--box">
+                    <div className="Premium__img--circle">
+                      <p>{index + 1}</p>
+                    </div>
+                    <img
+                      src={image_url ? image_url : photo5}
+                      alt="imageurl"
+                      className="Premium__img"
+                    />
                   </div>
-                  <a target="_blank" rel="noopener noreferrer" href={link}>
+
+                  <div className="Premium__content">
+                    <div className="Premium__time">
+                      <p className="blue-grey">recent post</p>
+                      <p className="red">{hourFormated}</p>
+                    </div>
+
                     <p className="Premium__time-txt">
-                      {title
-                        ? title
-                        : "Osimhen names player he wants to emulate"}
+                      <a target="_blank" rel="noopener noreferrer" href={link}>
+                        {title
+                          ? title
+                          : "Osimhen names player he wants to emulate"}
+                      </a>
                     </p>
-                  </a>
-                </div>
-              </article>
+                  </div>
+                </article>
+              </section>
             );
           })}
           {!searchTerm && (
             <main>
-              <div className="Premium__box">
+              {/* <div className="Premium__box">
                 <div className="Premium__img--box">
                   <div className="Premium__img--circle">
                     <p>72</p>
@@ -246,8 +252,8 @@ const Header = () => {
                     Osimhen names player he wants to emulate
                   </p>
                 </div>
-              </div>
-              <div className="Premium__box">
+              </div> */}
+              {/* <div className="Premium__box">
                 <div className="Premium__img--box">
                   <div className="Premium__img--circle">
                     <p>12</p>
@@ -263,8 +269,8 @@ const Header = () => {
                     Osimhen names player he wants to emulate
                   </p>
                 </div>
-              </div>
-              <div className="Premium__box">
+              </div> */}
+              {/* <div className="Premium__box">
                 <div className="Premium__img--box">
                   <div className="Premium__img--circle">
                     <p>23</p>
@@ -280,8 +286,8 @@ const Header = () => {
                     Osimhen names player he wants to emulate
                   </p>
                 </div>
-              </div>
-              <div className="Premium__box">
+              </div> */}
+              {/* <div className="Premium__box">
                 <div className="Premium__img--box">
                   <div className="Premium__img--circle">
                     <p>10</p>
@@ -297,7 +303,7 @@ const Header = () => {
                     Osimhen names player he wants to emulate
                   </p>
                 </div>
-              </div>
+              </div> */}
             </main>
           )}
         </div>

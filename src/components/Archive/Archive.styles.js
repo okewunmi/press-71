@@ -1,10 +1,25 @@
 import styled from "styled-components";
 import photo from "../../assets/img-5.jpg";
+
 export const Wrapper = styled.div`
-  padding: 2rem 5rem;
+  padding: 2.5rem 5rem;
 
   h2 {
     text-transform: uppercase;
+  }
+  .heading {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.8rem;
+
+    &--txt {
+      font-size: 1.8rem;
+    }
+  }
+  .underline {
+    width: 13.6rem;
+    border-bottom: 3px solid red;
+    margin-top: -1.4rem;
   }
 `;
 export const Content = styled.div`
@@ -49,7 +64,7 @@ export const Content = styled.div`
 
     &--txt {
       font-size: 0.7rem;
-      font-weight: 100;
+      font-weight: bold;
     }
     &--time {
       display: flex;
@@ -66,8 +81,15 @@ export const Content = styled.div`
 
     .text {
       padding-right: 1.3rem;
+      padding-bottom: 1rem;
+      a {
+        text-decoration: none;
+      }
     }
-
+    &-text {
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
     &-head {
       text-transform: uppercase;
       display: flex;
@@ -76,12 +98,13 @@ export const Content = styled.div`
     }
     &-txt {
       color: black;
-      margin-top: -1.7rem;
+      margin-top: -1rem;
 
       &--head {
         color: black;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         line-height: 1.4;
+        font-weight: 600;
       }
     }
     &-icon {
@@ -90,14 +113,17 @@ export const Content = styled.div`
     }
     &-time {
       display: flex;
-      width: 73%;
+      width: 80%;
       text-transform: uppercase;
       justify-content: space-between;
-      margin-top: -1.3rem;
+      margin-top: -0.9rem;
 
       p {
-        font-size: 0.75rem;
-        font-weight: 400;
+        font-size: 0.8rem;
+        font-weight: bolder;
+      }
+      span {
+        color: var(--Blue-Gray);
       }
     }
   }
@@ -110,5 +136,31 @@ export const Content = styled.div`
 
   .right {
     width: 25%;
+    padding-left: 1.3rem;
+    .btn {
+      display: flex;
+      justify-content: space-around;
+    }
+    button {
+      // border: none;
+      outline: none;
+      /* border: 1px solid var(--black); */
+      /* color: var(--black); */
+      padding: 0.5rem 0.8rem;
+      text-transform: uppercase;
+      border-radius: 3px;
+      transition: all 0.3s;
+      color: #3498db;
+      box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
+      // background: var(--grey);
+      font-weight: bold;
+      &:focus {
+        color: #3498db;
+        box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
+      }
+      /* color: var(--white);
+        background-color: var(--black);
+        transform: scale(1.2); */
+    }
   }
 `;

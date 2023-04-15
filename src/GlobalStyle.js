@@ -10,11 +10,13 @@ export const GlobalStyle = createGlobalStyle`
     --MedGrey:#353535;
     --darkGrey: #1c1c1c;
     --grey:#808080;
-    --Blue-Gray:	#7393B3;
+    --Blue-Gray:#7393B3;
     --fontSuperBig: 2.5rem;
     --fontBig: 1.4rem;
     --fontMed: 1.2rem;
-    --fontSmall: 1rem;   
+    --fontSmall: 1rem; 
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;  
 }
 
 

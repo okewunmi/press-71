@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
   background-size: 100%, cover;
   background-position: center;
   height: 97vh;
+
   color: #fff;
 
   .nav {
@@ -90,34 +91,46 @@ export const Wrapper = styled.div`
         align-items: center;
       }
       .input-search {
-        height: 2.1rem;
+        height: 2rem;
         width: 12rem;
         border-radius: 1rem;
-        background: var(--grey);
-        border: 1px solid var(--black);
-        padding: 1rem 1rem 1rem 2.5rem;
+        padding: 1.1rem 1.1rem 1.1rem 2.5rem;
         color: var(--white);
         font-size: 0.9rem;
         font-weight: 200;
         z-index: 1;
-        outline: none;
         position: relative;
-        transition: all 0.3s;
+        transition: all 0.4s;
+        border: none;
+        background: #20222d;
+        box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
+          inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
+          inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4);
+        transition: all 0.3s ease-in-out;
 
-        :focus,
-        :active {
+        &:focus,
+        &:active {
           width: 20rem;
+          outline: none;
+          box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
+            inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
+            inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4),
+            5px 5px 10px 2.5px rgba(0, 0, 0, 0.2),
+            -5px -5px 10px 2.5px rgba(77, 71, 100, 0.4),
+            -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
         }
       }
       &-btn {
         background: none;
         border: none;
         z-index: 10;
-        padding: 0.6rem;
+        padding-left: 0.7rem;
         cursor: pointer;
-        color: var(--white);
+        color: var(--Blue-Gray);
         font-size: 1.2rem;
         position: absolute;
+        align-self: center;
+        display: flex;
       }
     }
   }
@@ -158,11 +171,11 @@ export const Wrapper = styled.div`
           width: 75%;
           margin-top: -1.3rem;
           font-size: 0.6rem;
-          /* font-weight: 100; */
+          font-weight: 600;
           line-height: 1.6;
           word-spacing: 1px;
           letter-spacing: 1px;
-          color: var(--lightGrey);
+          color: var(--grey);
         }
       }
       .info {
@@ -199,9 +212,14 @@ export const Wrapper = styled.div`
       .btn {
         border: 1px solid var(--grey);
         display: block;
-        height: 2.5rem;
-        width: 2.5rem;
-        background: none;
+        height: 2.8rem;
+        width: 2.8rem;
+        border: 1px solid #333;
+        background: rgba(0, 0, 0, 1);
+        /* background: #20222d; */
+        box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
+          1px 1px 4px 0 rgba(0, 0, 0, 1);
+        transition: all 0.3s ease-in-out;
         color: var(--grey);
         margin-right: 1rem;
         border-radius: 50%;
@@ -209,8 +227,10 @@ export const Wrapper = styled.div`
 
         :hover {
           color: var(--white);
-          border: 2px solid var(--white);
+          /* border: 2px solid var(--white); */
           cursor: pointer;
+          box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
+            inset -1px -1px 4px 0 rgba(99, 99, 99, 1);
         }
       }
     }
@@ -231,9 +251,9 @@ export const Wrapper = styled.div`
     .Premium {
       display: flex;
       flex-direction: column;
-      width: 29%;
-      padding: 2rem 1.2rem;
-      height: 15rem;
+      width: 30%;
+      padding: 1rem 1.2rem;
+      height: 20rem;
       overflow-y: auto;
       a {
         text-decoration: none;
@@ -246,7 +266,19 @@ export const Wrapper = styled.div`
       &__box {
         display: flex;
         align-items: center;
-        padding: 0.3rem 0;
+        padding: 0.5rem 0.8rem;
+        /* background: rgba(0, 0, 0, 1); */
+        border-radius: 0.4rem;
+        border: 1px solid #333;
+        box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
+          1px 1px 4px 0 rgba(0, 0, 0, 1);
+        margin-bottom: 0.7rem;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
+            inset -1px -1px 4px 0 rgba(99, 99, 99, 1);
+        }
       }
       &__img {
         width: 4rem;
@@ -278,19 +310,20 @@ export const Wrapper = styled.div`
       &__content {
         display: flex;
         flex-direction: column;
+
         padding-left: 0.8rem;
       }
       &__time {
         display: flex;
         justify-content: space-between;
-        margin-bottom: -1.2rem;
+        margin-bottom: -0.9rem;
         text-transform: uppercase;
         p {
-          font-size: 0.8rem;
+          font-size: 0.7rem;
         }
 
         &-txt {
-          font-size: 0.9rem;
+          font-size: 0.8rem;
           font-weight: 500;
         }
       }
@@ -299,6 +332,9 @@ export const Wrapper = styled.div`
       }
       .grey {
         color: var(--grey);
+      }
+      .red {
+        color: red;
       }
     }
   }
