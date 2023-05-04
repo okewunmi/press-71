@@ -2,12 +2,10 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: rgba(232, 233, 237, 1);
-  font-family: Roboto;
   padding: 2rem 4rem;
   .heading {
     display: flex;
     align-items: center;
-
     &--txt {
       font-size: 1.7rem;
     }
@@ -23,6 +21,7 @@ export const Wrapper = styled.div`
     align-items: center;
     font-size: 0.7rem;
     font-weight: 700;
+
     color: var(--black);
     &--cicle {
       margin-left: 0.8rem;
@@ -46,7 +45,6 @@ export const Wrapper = styled.div`
         height: 2rem;
         border: 1px solid #333;
         background: rgba(0, 0, 0, 1);
-        /* background: #20222d; */
         box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
           1px 1px 4px 0 rgba(0, 0, 0, 1);
         transition: all 0.3s ease-in-out;
@@ -57,7 +55,6 @@ export const Wrapper = styled.div`
 
         :hover {
           color: var(--white);
-          /* border: 2px solid var(--white); */
           cursor: pointer;
           box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
             inset -1px -1px 4px 0 rgba(99, 99, 99, 1);
@@ -106,22 +103,7 @@ export const Card = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     place-items: center;
-    /* grid-column-gap: 5px;
-    grid-row-gap: 5px; */
 
-    /* &-box {
-      height: 22rem;
-      background: rgba(0, 0, 0, 1);
-      width: 100%;
-      display: flex;
-      border: 1px solid var(--grey);
-      justify-content: space-between;
-
-      :hover {
-        background: rgba(0, 0, 0, 0.9);
-        cursor: pointer;
-      }
-    } */
     &-txt {
       display: flex;
       background: linear-gradient(
@@ -130,8 +112,6 @@ export const Card = styled.div`
         rgba(99, 99, 99, 1)
       );
       padding: 1.4rem 2rem;
-      /* border-left: 1px solid var(--grey);
-      border-bottom: 1px solid var(--grey); */
       flex-direction: column;
       height: 22rem;
       justify-content: space-between;
@@ -144,7 +124,6 @@ export const Card = styled.div`
 
       &--head {
         display: flex;
-        /* padding: 1.4rem 2rem; */
         align-items: center;
         width: 100%;
         text-transform: uppercase;
@@ -162,7 +141,6 @@ export const Card = styled.div`
       }
       &--body {
         display: flex;
-        /* padding: 1.4rem 2rem; */
         flex-direction: column;
 
         a {
@@ -180,7 +158,6 @@ export const Card = styled.div`
       height: 100%;
       width: 100%;
       object-fit: fill;
-
       background: transparent;
     }
   }

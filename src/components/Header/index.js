@@ -7,27 +7,25 @@ import { FaCalendarAlt, FaNewspaper } from "react-icons/fa";
 import { TbPointFilled } from "react-icons/tb";
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
-import photo1 from "../../assets/img-1.jpeg";
-import photo2 from "../../assets/img-2.jpeg";
-import photo3 from "../../assets/img-3.jpeg";
-import photo4 from "../../assets/img-4.jpg";
 import photo5 from "../../assets/preniun.jpg";
+// import photo4 from "../../assets/img-2.jpeg";
+// import photo1 from "../../assets/img-4.jpg";
 import Spinner from "../Spinner";
 //const Api_Key = "8hm6temfzaJ10LpoVS5fpArANkGmFBxOkE2zKbw9";
-const api_key = `?apikey=${process.env.REACT_APP_API_KEY}`;
+// const api_key = `?apikey=${process.env.REACT_APP_API_KEY}`;
 
-const API_ENDPOINT = "https://newsdata.io/api/1/news";
+// const API_ENDPOINT = "https://newsdata.io/api/1/news";
 
 const tempUrl =
   "https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&country=ng";
 
 const Header = () => {
-  const [news, setNews] = useState({});
+  const [news, setNews] = useState(0);
   const [buttonValues, setButtonsValues] = useState([]);
   // const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState([]);
-  // const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
   const [searchTerm, setSearchTerm] = useState("");
 
   const btnfetch = async (value) => {
@@ -36,6 +34,7 @@ const Header = () => {
     setNews(data.results[0]);
     setButtonsValues((prevValues) => [...prevValues, value]);
   };
+
   const searchBtn = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -54,10 +53,24 @@ const Header = () => {
   }, []);
 
   const Next = () => {
+    setIndex((oldIndex) => {
+      let index = oldIndex + 1;
+      if (index > news.length - 1) {
+        index = 0;
+      }
+      return index;
+    });
     console.log("next");
   };
   const Prev = () => {
     console.log("prev");
+    setIndex((oldIndex) => {
+      let index = oldIndex - 1;
+      if (index < 0) {
+        index = news.length - 1;
+      }
+      return index;
+    });
   };
 
   const { creator, description, link, pubDate, title } = news;
@@ -194,7 +207,7 @@ const Header = () => {
         <div className="Premium">
           {loading && <Spinner />}
           {search.map((items, index) => {
-            const { link, pubDate, title, image_url, source_id } = items;
+            const { link, pubDate, title, image_url } = items;
             const newObject = new Date(pubDate);
             const hourFormated = newObject.toLocaleString("en-US", {
               hour: "numeric",
@@ -203,8 +216,8 @@ const Header = () => {
             });
 
             return (
-              <section>
-                <article className="Premium__box" key={source_id}>
+              <section key={index}>
+                <article className="Premium__box">
                   <div className="Premium__img--box">
                     <div className="Premium__img--circle">
                       <p>{index + 1}</p>

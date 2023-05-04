@@ -2,6 +2,7 @@ import styled from "styled-components";
 import photo from "../../assets/photo.jpg";
 
 export const Wrapper = styled.div`
+  font-family: "EB Garamond", serif;
   background: radial-gradient(
       circle at center,
       rgba(169, 169, 169, 0.1) 15%,
@@ -20,12 +21,13 @@ export const Wrapper = styled.div`
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
-    padding: 0 5rem;
+    padding: 0 3rem;
     align-items: center;
     border-bottom: 1px solid var(--grey);
 
     .logo {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
+
       span {
         color: red;
       }
@@ -33,7 +35,7 @@ export const Wrapper = styled.div`
     .icon {
       color: var(--grey);
       padding-right: 5px;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
     .weather {
       display: flex;
@@ -46,16 +48,15 @@ export const Wrapper = styled.div`
         align-items: center;
       }
       p {
-        font-size: 13px;
+        font-size: 12px;
       }
     }
   }
   .nav-section {
     display: flex;
-    padding: 1.5rem 5rem;
+    padding: 1.5rem 3rem;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
 
     .nav-btn {
       display: flex;
@@ -134,11 +135,12 @@ export const Wrapper = styled.div`
       }
     }
   }
+
   .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.2rem 5rem;
+    padding: 2.2rem 3rem;
 
     .text {
       display: flex;
@@ -267,7 +269,7 @@ export const Wrapper = styled.div`
         display: flex;
         align-items: center;
         padding: 0.5rem 0.8rem;
-        /* background: rgba(0, 0, 0, 1); */
+        background: rgba(0, 0, 0, 0.6);
         border-radius: 0.4rem;
         border: 1px solid #333;
         box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
@@ -285,6 +287,7 @@ export const Wrapper = styled.div`
         height: 4rem;
         border-radius: 50%;
         object-fit: cover;
+        border: 2px solid var(--Blue-Gray);
       }
       &__img--box {
         position: relative;

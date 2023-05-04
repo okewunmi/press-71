@@ -4,7 +4,7 @@ import Spinner from "../Spinner";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 const url =
-  "https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&q=tourism&language=en&country=ng";
+  "https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&q=traveling&language=en&country=ng";
 const Travel = () => {
   const [travelNews, setTravelNews] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ const Travel = () => {
 
   const loadMore = async () => {
     const response = await fetch(
-      `https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&q=tourism&language=en&country=ng&page=${page}`
+      `https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&q=traveling&language=en&country=ng&page=${page}`
     );
     const data = await response.json();
     setTravelNews([...data.results, ...data.results]);
