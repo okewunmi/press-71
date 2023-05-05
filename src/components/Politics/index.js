@@ -15,6 +15,7 @@ const Politics = () => {
   const [news, setNews] = useState([]);
   const [nextPage, setNextPage] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [color, setColor] = useState(false);
 
   useEffect(() => {
     const getNews = async () => {
@@ -41,7 +42,12 @@ const Politics = () => {
     setNextPage(data.nextPage);
     setLoading(false);
   };
-  const handleLike = (e) => {};
+  const handleLike = () => {
+    setColor(!color);
+  };
+  const buttonColor = {
+    color: color ? "blue" : "black",
+  };
 
   return (
     <Wrapper>
@@ -89,9 +95,12 @@ const Politics = () => {
                 </p>
                 <div className="politic__box--comment">
                   <div className="icon__like">
-                    <button onClick={handleLike}>
+                    <button>
                       <AiOutlineLike />
                     </button>
+                    {/* <button style={buttonColor} onClick={handleLike}>
+                      <AiOutlineLike />
+                    </button> */}
                   </div>
                   <div className="icon__dislike">
                     <button>

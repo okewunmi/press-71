@@ -143,7 +143,7 @@ export const Content = styled.div`
       }
     }
     &-text {
-      font-size: 0.7rem;
+      font-size: 0.6rem;
       font-weight: 600;
     }
     &-head {
@@ -160,8 +160,7 @@ export const Content = styled.div`
         color: black;
         font-size: 0.75rem;
         line-height: 1.1;
-        font-weight: 800;
-        word-spacing: 1px;
+        font-weight: 600;
       }
     }
     &-icon {
@@ -170,10 +169,12 @@ export const Content = styled.div`
     }
     &-time {
       display: flex;
-      width: 75%;
+      /* width: 75%; */
+      padding-right: 4rem;
       text-transform: uppercase;
       justify-content: space-between;
       margin-top: -0.6rem;
+      border-bottom: 2px solid var(--lightGrey);
 
       p {
         font-size: 0.75rem;
@@ -226,7 +227,7 @@ export const Content = styled.div`
       width: 4rem;
       height: 4rem;
       border-radius: 50%;
-      border: 5px solid var(--Blue-Gray);
+      border: 3px solid var(--Blue-Gray);
       object-fit: cover;
     }
     .Premium__img--box {
