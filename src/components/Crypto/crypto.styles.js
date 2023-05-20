@@ -6,11 +6,11 @@ export const Wrapper = styled.div`
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
@@ -37,7 +37,7 @@ export const Wrapper = styled.div`
       font-size: 1.7rem;
       /* Extra small devices (phones, 600px and down) */
       @media only screen and (max-width: 600px) {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
@@ -58,7 +58,8 @@ export const Wrapper = styled.div`
     border-bottom: 1px solid var(--lightGrey);
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-      width: 60%;
+      width: 50%;
+      display: none;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
@@ -96,7 +97,7 @@ export const Wrapper = styled.div`
     }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-      width: 25rem;
+      width: 22rem;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
@@ -118,8 +119,8 @@ export const Wrapper = styled.div`
     }
   }
   .Premium__img {
-    width: 3.6rem;
-    height: 3.6rem;
+    width: 3.4rem;
+    height: 3.4rem;
     border-radius: 50%;
     object-fit: cover;
   }
