@@ -13,7 +13,25 @@ export const Wrapper = styled.div`
   background-size: 100%, cover;
   background-position: center;
   height: 97vh;
+  @media only screen and (max-width: 600px) {
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 600px) {
+    height: 50vh;
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+  }
+  @media only screen and (max-width: 850px) {
+    /* align-items: flex-start; */
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  }
 
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+  }
   color: #fff;
 
   .nav {
