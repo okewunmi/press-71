@@ -101,11 +101,11 @@ export const Wrapper = styled.div`
 
       /* Extra small devices (phones, 600px and down) */
       @media only screen and (max-width: 600px) {
-        width: 23rem;
+        width: 20rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
-        width: 23rem;
+        width: 20rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
@@ -150,11 +150,11 @@ export const Wrapper = styled.div`
         }
         /* Extra small devices (phones, 600px and down) */
         @media only screen and (max-width: 600px) {
-          width: 25rem;
+          width: 19rem;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {
-          width: 25rem;
+          width: 19rem;
         }
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
@@ -177,7 +177,7 @@ export const Wrapper = styled.div`
       background: black;
       color: var(--white);
       font-weight: bold;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       text-transform: uppercase;
       border: none;
       transition: var(--transition);
@@ -187,11 +187,11 @@ export const Wrapper = styled.div`
       }
       /* Extra small devices (phones, 600px and down) */
       @media only screen and (max-width: 600px) {
-        width: 25rem;
+        width: 19rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
-        width: 25rem;
+        width: 19rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
@@ -231,7 +231,7 @@ export const Wrapper = styled.div`
       margin-bottom: 0.6rem;
 
       p {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
         /* color: var(--black); */
       }
     }
