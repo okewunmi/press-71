@@ -17,7 +17,7 @@ const todaysDateFormated = [year, month, day].join("-");
 console.log(todaysDateFormated);
 
 const mainUrl = `https://newsapi.org/v2/everything?q=nigeria&from={todaysDateFormated}&to={todaysDateFormated}&pageSize=20&apiKey=2f1de88abc15435a9d26cb175a34a7e7`;
-const key = "apiKey=2f1de88abc15435a9d26cb175a34a7e7";
+
 const Index = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
@@ -32,8 +32,6 @@ const Index = () => {
     getNews();
   }, []);
 
-  const date = "2023-05-19";
-
   const sortNews = async (value) => {
     const response = await fetch(
       `https://newsapi.org/v2/everything?q=nigeria&pageSize=20&from={todaysDateFormated}&to={todaysDateFormated}&sortBy=${value}&pageSize=20&apiKey=2f1de88abc15435a9d26cb175a34a7e7`
@@ -43,8 +41,8 @@ const Index = () => {
     setLoading(false);
   };
 
-  const next = async () => {};
-  const previous = async () => {};
+  // const next = async () => {};
+  // const previous = async () => {};
 
   return (
     <Wrapper>
