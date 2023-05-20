@@ -101,11 +101,11 @@ export const Wrapper = styled.div`
 
       /* Extra small devices (phones, 600px and down) */
       @media only screen and (max-width: 600px) {
-        width: 25rem;
+        width: 23rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
-        width: 25rem;
+        width: 23rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
