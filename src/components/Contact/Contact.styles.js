@@ -1,19 +1,78 @@
 import styled from "styled-components";
 export const Wrapper = styled.div`
-  padding: 3rem 5rem;
+  padding: 3rem 6rem;
   background: rgba(232, 233, 237, 1);
 
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    padding: 3rem 1.2rem;
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    padding: 3rem 1.5rem;
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    padding: 3rem 2rem;
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    padding: 3rem 3rem;
+  }
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    padding: 3rem 5rem;
+  }
   .contact {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      flex-direction: column;
+    }
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      flex-direction: column;
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      flex-direction: row;
+    }
+    @media only screen and (min-width: 1200px) {
+      flex-direction: row;
+    }
 
     .newsletter {
       padding: 1rem 3rem;
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        padding: 1rem;
+      }
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        padding: 1rem 1.8rem;
+      }
+      @media only screen and (min-width: 1200px) {
+        padding: 1rem 2rem;
+      }
     }
+
     .podcast {
       display: flex;
       align-items: center;
       padding: 1rem 2rem;
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        padding: 1rem 1.5rem;
+      }
+
       .txt {
         text-align: center;
         word-spacing: 1px;
@@ -30,7 +89,7 @@ export const Wrapper = styled.div`
       }
     }
     .box {
-      width: 23.5rem;
+      width: 24rem;
       height: 13rem;
       border: 1px solid var(--grey);
       border-radius: 4px;
@@ -38,6 +97,27 @@ export const Wrapper = styled.div`
       flex-direction: column;
       justify-content: space-around;
       align-items: center;
+      margin-bottom: 1rem;
+
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        width: 30rem;
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        width: 30rem;
+      }
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        width: 28rem;
+      }
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        width: 28rem;
+      }
+      @media only screen and (min-width: 1200px) {
+        width: 24rem;
+      }
 
       .head {
         display: flex;
@@ -68,6 +148,26 @@ export const Wrapper = styled.div`
         :focus {
           border: 2px solid var(--Blue-Gray);
         }
+        /* Extra small devices (phones, 600px and down) */
+        @media only screen and (max-width: 600px) {
+          width: 25rem;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+          width: 25rem;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+          width: 17rem;
+        }
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+          width: 17rem;
+        }
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+          width: 17rem;
+        }
       }
     }
     .btn-contact {
@@ -84,6 +184,26 @@ export const Wrapper = styled.div`
       cursor: pointer;
       :hover {
         color: var(--Blue-Gray);
+      }
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        width: 25rem;
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        width: 25rem;
+      }
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        width: 17rem;
+      }
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        width: 17rem;
+      }
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        width: 17rem;
       }
     }
   }

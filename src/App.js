@@ -1,5 +1,6 @@
 import { GlobalStyle } from "./GlobalStyle";
 import Header from "./components/Header/index";
+import AllNews from "./components/AllNews/index";
 import World from "./components/World/index";
 import CryptoNews from "./components/Crypto";
 import Contact from "./components/Contact";
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
       <Header />
+      <AllNews />
       <CryptoNews />
       <Politics />
       <Contact />

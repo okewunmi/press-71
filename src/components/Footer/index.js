@@ -5,7 +5,7 @@ import {
   TiSocialTwitter,
   TiSocialYoutube,
 } from "react-icons/ti";
-import photo3 from "../../assets/img-4.jpg";
+import photo3 from "../../assets/img-2.jpeg";
 
 const Footer = () => {
   return (
@@ -25,9 +25,9 @@ const Footer = () => {
             <div className="icon">
               <TiSocialFacebook />
             </div>
-            <div className="icon">
+            {/* <div className="icon">
               <TiSocialTwitter />
-            </div>
+            </div> */}
             <div className="icon">
               <TiSocialYoutube />
             </div>
@@ -78,7 +78,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer__feed">
-          <h3>Recent posts</h3>
+          <h3>Recent tweets</h3>
           <div className="footer__recent--box">
             <div className="twitter">
               <TiSocialTwitter />
@@ -107,10 +107,14 @@ const Footer = () => {
       </div>
       <div className="footer__comment">
         <p>
-          All thanks to{" "}
+          All thanks to
           <span>
-            <a href="https://newsdata.io/">NewsData API</a>
-          </span>{" "}
+            <a href="https://newsdata.io/"> NewsData API </a>
+          </span>
+          <span> && </span>
+          <span>
+            <a href="https://newsapi.org/"> NEWSAPI </a>
+          </span>
           for providing access to news articles from all over the world
         </p>
       </div>

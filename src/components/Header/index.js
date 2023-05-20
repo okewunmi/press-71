@@ -79,15 +79,34 @@ const Header = () => {
   const minute = newObject.getMinutes();
   const minuteFormated = minute.toString().padStart(2, "0");
 
+  const newObject2 = new Date();
+  const day = newObject2.getDay();
+  const dayToDay = (day) => {
+    if (day === 0) {
+      return "sunday";
+    } else if (day === 1) {
+      return "monday";
+    } else if (day === 2) {
+      return "tuesday";
+    } else if (day === 3) {
+      return "wednesday";
+    } else if (day === 4) {
+      return "thursday";
+    } else if (day === 5) {
+      return "friday";
+    } else if (day === 6) {
+      return "saturday";
+    }
+  };
   return (
     <Wrapper>
       <div className="nav">
-        <div className="weather">
-          <div className="right">
+        <div className="weather ">
+          <div className="right top">
             <MdOutlineLocationCity className="icon" />
             <p>lagos</p>
           </div>
-          <div className="flex">
+          <div className="flex top">
             <TiWeatherPartlySunny className="icon" />
             <p>30 degree</p>
           </div>
@@ -95,12 +114,12 @@ const Header = () => {
         <h2 className="logo">
           press<span>71</span>
         </h2>
-        <div className="weather">
-          <div className="right">
+        <div className="weather ">
+          <div className="right top-1">
             <FaCalendarAlt className="icon" />
-            <p>saturday</p>
+            <p>{dayToDay(day)}</p>
           </div>
-          <div className="flex">
+          <div className="flex top">
             <FaNewspaper className="icon" />
             <p>today magasize</p>
           </div>
@@ -109,39 +128,31 @@ const Header = () => {
       {/* nav butttons */}
 
       <nav className="nav-section">
-        <div className="nav-btn">
+        <div className="nav-btn has-scrollbar">
           <div>
-            <TbPointFilled className=" " />
             <button onClick={() => btnfetch("Business")}>Business</button>
           </div>
           <div>
-            <TbPointFilled className="hide " />
             <button onClick={() => btnfetch("Entertainment")}>
               Entertainment
             </button>
           </div>
           <div>
-            <TbPointFilled className="hide" />
             <button onClick={() => btnfetch("Health")}>Health</button>
           </div>
           <div>
-            <TbPointFilled className="hide" />
             <button onClick={() => btnfetch("Politics")}>Politics</button>
           </div>
           <div>
-            <TbPointFilled className="hide" />
             <button onClick={() => btnfetch("Science")}>Science</button>
           </div>
           <div>
-            <TbPointFilled className="hide" />
             <button onClick={() => btnfetch("Sports")}>Sports</button>
           </div>
           <div>
-            <TbPointFilled className="hide" />
             <button onClick={() => btnfetch("Technology")}>Technology</button>
           </div>
           <div>
-            <TbPointFilled className="hide" />
             <button onClick={() => btnfetch("World")}>World</button>
           </div>
         </div>
@@ -180,7 +191,7 @@ const Header = () => {
 
             <p className="title__txt">
               {description
-                ? description.slice(0, 80).concat("....")
+                ? description.slice(0, 100).concat(" ...")
                 : "The National Drug Law Enforcement Agency has intercepted 2.7kg of cannabis concealed...."}
             </p>
           </div>

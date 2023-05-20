@@ -16,7 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     --fontMed: 1.2rem;
     --fontSmall: 1rem; 
     --transition: all 0.3s linear;
-    --spacing: 0.1rem;  
+    --spacing: 0.1rem; 
+    --onyx: hsl(240, 1%, 17%); 
 }
 
 
@@ -45,6 +46,10 @@ body{
     a{
         cursor: pointer;
     }
+    @media screen and (min-width: 850px) {
+        font-size: 90%;
+   
+    }
 }
 .display{
     display:visible;
@@ -53,9 +58,6 @@ body{
 .hide{
     visibility: hidden;
 }
-@media screen and (max-width: 390px) {
-   
-   
-  }
+
 
 `;

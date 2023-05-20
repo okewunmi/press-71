@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card, Wrapper } from "./Politics.styles";
+
 import { HiArrowNarrowRight } from "react-icons/hi";
 import {
   AiOutlineComment,
@@ -15,7 +16,7 @@ const Politics = () => {
   const [news, setNews] = useState([]);
   const [nextPage, setNextPage] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [color, setColor] = useState(false);
+  const [changeColor, setChangeColor] = useState(false);
 
   useEffect(() => {
     const getNews = async () => {
@@ -42,11 +43,13 @@ const Politics = () => {
     setNextPage(data.nextPage);
     setLoading(false);
   };
-  const handleLike = () => {
-    setColor(!color);
+  const handleLike = (index) => {
+    const clicked = [...changeColor];
+    clicked[index] = true;
+    setChangeColor(clicked);
   };
   const buttonColor = {
-    color: color ? "blue" : "black",
+    color: changeColor ? "blue" : "black",
   };
 
   return (
@@ -76,44 +79,37 @@ const Politics = () => {
             const formatedDate = [day, month, year].join(" ");
 
             return (
-              <main className="politic__box" key={index}>
-                <div className="politic__box__img">
+              <div className="Premium__box" key={index}>
+                <div className="Premium__img--box">
+                  <div className="Premium__img--circle">
+                    <p>{index + 1}</p>
+                  </div>
                   <img
                     src={image_url || photo1}
-                    alt="name"
-                    className="politic__box--img"
+                    alt="imageurl"
+                    className="Premium__img"
                   />
-                  <figure className="politic__box--txt">
-                    <p className="politic__box--name">{creator[0]}</p>
-                    <p className="politic__box--time">{formatedDate}</p>
-                  </figure>
                 </div>
-                <p className="politic__box--paragraph">
-                  <a href={link}>
-                    {title ? title.slice(0, 60).concat("....") : title}
-                  </a>
-                </p>
-                <div className="politic__box--comment">
-                  <div className="icon__like">
-                    <button>
-                      <AiOutlineLike />
-                    </button>
-                    {/* <button style={buttonColor} onClick={handleLike}>
-                      <AiOutlineLike />
-                    </button> */}
+                <div className="Premium__content">
+                  <div className="Premium__time">
+                    <p className="grey creator">
+                      {creator && creator > 0 && creator.length > 16
+                        ? creator.slice(0, 16)
+                        : creator}
+                    </p>
+                    <p className="blue-grey">{formatedDate || "9.00 pm"}</p>
                   </div>
-                  <div className="icon__dislike">
-                    <button>
-                      <AiOutlineDislike />
-                    </button>
-                  </div>
-                  <div className="icon">
-                    <button>
-                      <AiOutlineComment />
-                    </button>
+                  <div>
+                    <p className="Premium__time-txt">
+                      <a href={link}>
+                        {title
+                          ? title.slice(0, 100).concat("....")
+                          : "North Korea Is Now Mining Crypto to Launder Its Stolen Loot"}
+                      </a>
+                    </p>
                   </div>
                 </div>
-              </main>
+              </div>
             );
           })}
       </Card>

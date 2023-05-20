@@ -3,6 +3,27 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   background: rgba(232, 233, 237, 1);
   padding: 2rem 4rem;
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    padding: 1.2rem 6rem;
+  }
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    padding: 1.5rem 6rem;
+  }
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    padding: 1.5rem 3rem;
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    padding: 2rem 3rem;
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    padding: 2rem 4rem;
+  }
   .heading {
     display: flex;
     align-items: center;
@@ -13,6 +34,29 @@ export const Wrapper = styled.div`
   .underline {
     width: 75%;
     border-bottom: 1px solid var(--lightGrey);
+    @media only screen and (max-width: 600px) {
+      display: none;
+    }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      width: 0%;
+    }
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      width: 65%;
+      border-bottom: 1px solid var(--lightGrey);
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      width: 70%;
+      border-bottom: 1px solid var(--lightGrey);
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      width: 75%;
+      border-bottom: 1px solid var(--lightGrey);
+    }
   }
   .btn-box {
     display: flex;
@@ -103,6 +147,39 @@ export const Card = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
     place-items: center;
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 600px) {
+      padding: 1.5rem 0;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      place-items: center;
+    }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      padding: 1.5rem 0;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      place-items: center;
+    }
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      place-items: center;
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      place-items: center;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      place-items: center;
+    }
 
     &-txt {
       display: flex;
@@ -121,6 +198,24 @@ export const Card = styled.div`
         background: rgba(0, 0, 0, 0.9);
         cursor: pointer;
       }
+      @media only screen and (max-width: 600px) {
+        height: 18rem;
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        padding: 1.3rem 2rem;
+        height: 18rem;
+      }
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        padding: 1.3rem 2rem;
+        height: 20rem;
+      }
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        padding: 1.3rem 2rem;
+        height: 20rem;
+      }
 
       &--head {
         display: flex;
@@ -131,6 +226,21 @@ export const Card = styled.div`
         p {
           font-weight: bold;
           font-size: 0.8rem;
+          @media only screen and (max-width: 600px) {
+            font-size: 0.6rem;
+          }
+          /* Small devices (portrait tablets and large phones, 600px and up) */
+          @media only screen and (min-width: 600px) {
+            font-size: 0.7rem;
+          }
+          /* Medium devices (landscape tablets, 768px and up) */
+          @media only screen and (min-width: 768px) {
+            font-size: 0.7rem;
+          }
+          /* Large devices (laptops/desktops, 992px and up) */
+          @media only screen and (min-width: 992px) {
+            font-size: 0.75rem;
+          }
         }
         .date {
           color: red;
@@ -146,6 +256,21 @@ export const Card = styled.div`
         a {
           color: var(--white);
           font-size: 1.2rem;
+          @media only screen and (max-width: 600px) {
+            font-size: 0.9rem;
+          }
+          /* Small devices (portrait tablets and large phones, 600px and up) */
+          @media only screen and (min-width: 600px) {
+            font-size: 0.9rem;
+          }
+          /* Medium devices (landscape tablets, 768px and up) */
+          @media only screen and (min-width: 768px) {
+            font-size: 1rem;
+          }
+          /* Large devices (laptops/desktops, 992px and up) */
+          @media only screen and (min-width: 992px) {
+            font-size: 1rem;
+          }
         }
         p {
           font-size: 0.7rem;

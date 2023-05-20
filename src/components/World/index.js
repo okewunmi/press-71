@@ -6,7 +6,7 @@ import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 import photo4 from "../../assets/img-5.jpg";
 import photo1 from "../../assets/img-4.jpg";
 const url =
-  "https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&country=ng&category=world";
+  "https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&language=en&category=world";
 
 const World = () => {
   const [news, setNews] = useState([]);
@@ -48,13 +48,14 @@ const World = () => {
 
   const loadMore = async () => {
     const response = await fetch(
-      `https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&country=ng&category=world&page=${nextPage}`
+      `https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&language=en&category=world&page=${nextPage}`
     );
     const data = await response.json();
     setNews([...data.results, ...data.results]);
     setNextPage(data.nextPage);
     setLoading(false);
   };
+  const { link, pubDate, title, creator, image_url } = news;
 
   return (
     <Wrapper>
@@ -70,12 +71,12 @@ const World = () => {
       </div>
 
       <Content>
-        <div className="left">
+        <div className="right padRight ">
           {/* {loading && <Spinner />} */}
           {firstHalf &&
             firstHalf.length > 0 &&
             firstHalf.map((items, index) => {
-              const { link, pubDate, title, creator } = items;
+              const { link, pubDate, title, creator, image_url } = items;
               const newObject = new Date(pubDate);
               const hourFormated = newObject.toLocaleString("en-US", {
                 hour: "numeric",
@@ -84,21 +85,31 @@ const World = () => {
               });
 
               return (
-                <div className="text" key={index}>
-                  <div className="left-head">
-                    <TbPointFilled className="left-icon" />
-                    <p className="left-text">hot topic</p>
+                <div className="Premium__box" key={index}>
+                  <div className="Premium__img--box">
+                    <div className="Premium__img--circle">
+                      <p>{index + 1}</p>
+                    </div>
+                    <img
+                      src={image_url || photo4}
+                      alt="imageurl"
+                      className="Premium__img"
+                    />
                   </div>
-                  <div className="left-txt">
-                    <a target="_blank" rel="noopener noreferrer" href={link}>
-                      <p className="left-txt--head">{title}</p>
-                    </a>
-                  </div>
-                  <div className="left-time">
-                    <p className="minute">{hourFormated}</p>
-                    <p>
-                      by: <span className="blue-grey">{creator}</span>
-                    </p>
+                  <div className="Premium__content">
+                    <div className="Premium__time">
+                      <p className="grey creator">{creator}</p>
+                      <p className="blue-grey">{hourFormated || "9.00 pm"}</p>
+                    </div>
+                    <div>
+                      <p className="Premium__time-txt">
+                        <a href={link}>
+                          {title
+                            ? title.slice(0, 150).concat("....")
+                            : "North Korea Is Now Mining Crypto to Launder Its Stolen Loot"}
+                        </a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               );
@@ -118,17 +129,17 @@ const World = () => {
             <div className="center__text--box">
               <p>World News</p>
             </div>
-            <a href="w" className="center__text--link">
+            <a href={link} className="center__text--link">
               <p>
-                {
-                  "Google's Pixel 7 and 7 Pro’s design gets revealed even more with fresh crisp renders"
-                }
+                {title
+                  ? title.slice(0, 150).concat("....")
+                  : "Google's Pixel 7 and 7 Pro’s design gets revealed even more with fresh crisp renders"}
               </p>
             </a>
           </div>
         </div>
 
-        <div className="right">
+        <div className="right padLeft ">
           {(secondHalf &&
             secondHalf.length > 0 &&
             secondHalf.map((items, index) => {
@@ -154,18 +165,14 @@ const World = () => {
                   </div>
                   <div className="Premium__content">
                     <div className="Premium__time">
-                      <p className="grey creator">
-                        {creator && creator > 0 && creator.length > 20
-                          ? creator.slice(0, 25)
-                          : creator}
-                      </p>
+                      <p className="grey creator">{creator}</p>
                       <p className="blue-grey">{hourFormated || "9.00 pm"}</p>
                     </div>
                     <div>
                       <p className="Premium__time-txt">
                         <a href={link}>
                           {title
-                            ? title.slice(0, 200).concat("....")
+                            ? title.slice(0, 150).concat("....")
                             : "North Korea Is Now Mining Crypto to Launder Its Stolen Loot"}
                         </a>
                       </p>

@@ -35,7 +35,7 @@ const Travel = () => {
       <div className="heading">
         <h2 className="heading--txt">Traveling</h2>
         <hr className="underline"></hr>
-        <div className="btn-box">
+        <div className="btn-box hide">
           View more
           <button className="btn-box--cicle btn-box__white" onClick={loadMore}>
             <HiArrowNarrowRight />
