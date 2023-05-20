@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Card, Wrapper } from "./Politics.styles";
 
 import { HiArrowNarrowRight } from "react-icons/hi";
-import {
-  AiOutlineComment,
-  AiOutlineDislike,
-  AiOutlineLike,
-} from "react-icons/ai";
+// import {
+//   AiOutlineComment,
+//   AiOutlineDislike,
+//   AiOutlineLike,
+// } from "react-icons/ai";
 import photo1 from "../../assets/img-4.jpg";
 import Spinner from "../Spinner";
 const Politics = () => {
@@ -16,7 +16,7 @@ const Politics = () => {
   const [news, setNews] = useState([]);
   const [nextPage, setNextPage] = useState(0);
   const [loading, setLoading] = useState(false);
-  const [changeColor, setChangeColor] = useState(false);
+  // const [changeColor, setChangeColor] = useState(false);
 
   useEffect(() => {
     const getNews = async () => {
@@ -43,14 +43,11 @@ const Politics = () => {
     setNextPage(data.nextPage);
     setLoading(false);
   };
-  const handleLike = (index) => {
-    const clicked = [...changeColor];
-    clicked[index] = true;
-    setChangeColor(clicked);
-  };
-  const buttonColor = {
-    color: changeColor ? "blue" : "black",
-  };
+  // const handleLike = (index) => {
+  //   const clicked = [...changeColor];
+  //   clicked[index] = true;
+  //   setChangeColor(clicked);
+  // };
 
   return (
     <Wrapper>
