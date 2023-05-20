@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    padding: 3rem 4rem;
+    padding: 3rem 5rem;
   }
 
   h2 {
@@ -97,11 +97,11 @@ export const Wrapper = styled.div`
     }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-      width: 22rem;
+      width: 20rem;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
-      width: 23rem;
+      width: 22rem;
     }
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
@@ -192,10 +192,11 @@ export const Content = styled.div`
     margin-top: 2rem;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-column-gap: 12px;
-    grid-row-gap: 12px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 14px;
+    grid-row-gap: 13px;
     place-items: center;
+
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
       grid-template-columns: repeat(1, 1fr);

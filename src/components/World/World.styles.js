@@ -7,15 +7,15 @@ export const Wrapper = styled.div`
   /* background: rgba(232, 233, 237, 0.3); */
 
   @media only screen and (max-width: 600px) {
-    padding: 3rem 5rem 7.5rem 5rem;
+    padding: 3rem 1rem;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    padding: 3rem 5rem 7.5rem 5rem;
+    padding: 3rem 1rem;
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    padding: 3rem 5rem 7.5rem 5rem;
+    padding: 3rem 3rem 7.5rem 3rem;
   }
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    padding: 3rem 5rem 7.5rem 5rem;
+    padding: 3rem 4rem 7.5rem 4rem;
   }
 
   .heading {
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
     &--txt {
       font-size: 1.7rem;
       @media only screen and (max-width: 600px) {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
@@ -393,28 +393,29 @@ export const Content = styled.div`
 
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     @media only screen and (max-width: 600px) {
-      width: 90%;
+      width: 100%;
       margin-top: 2.5rem;
       padding-left: 0;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
-      width: 90%;
+      width: 100%;
       margin-top: 2.5rem;
       margin-bottom: 1.2rem;
       /* padding-left: 0; */
     }
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
-      width: 50%;
+      width: 100%;
       margin-top: 0;
       /* padding-left: 1.5rem; */
     }
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
-      width: 50%;
+      width: 100%;
       margin-top: 0;
       /* padding-left: 1.5rem; */
     }
@@ -426,7 +427,7 @@ export const Content = styled.div`
     }
 
     .Premium__box {
-      width: 95%;
+      width: 20rem;
       height: 6rem;
       display: flex;
       margin-bottom: 0.6rem;
@@ -440,23 +441,23 @@ export const Content = styled.div`
       transition: var(--transition);
 
       @media only screen and (max-width: 600px) {
-        width: 92%;
+        width: 19rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
-        width: 92%;
+        width: 19rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
-        width: 93%;
+        width: 18rem;
       }
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
-        width: 96%;
+        width: 19rem;
       }
       /* Extra large devices (large laptops and desktops, 1200px and up) */
       @media only screen and (min-width: 1200px) {
-        width: 96%;
+        width: 20rem;
       }
       &:hover {
         cursor: pointer;
@@ -470,14 +471,14 @@ export const Content = styled.div`
       }
     }
     .Premium__img {
-      width: 3.4rem;
-      height: 3.4rem;
+      width: 3.3rem;
+      height: 3.3rem;
       border-radius: 50%;
       border: 3px solid var(--Blue-Gray);
       object-fit: cover;
       @media only screen and (max-width: 600px) {
-        width: 3.4rem;
-        height: 3.4rem;
+        width: 3.3rem;
+        height: 3.3rem;
         border: 2px solid var(--Blue-Gray);
       }
     }
@@ -521,7 +522,7 @@ export const Content = styled.div`
       }
 
       &-txt {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         font-weight: 500;
 
         a {

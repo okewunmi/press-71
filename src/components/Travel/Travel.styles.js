@@ -150,6 +150,7 @@ export const Card = styled.div`
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
       padding: 1.5rem 0;
+      width: 95%;
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(2, 1fr);
       place-items: center;
@@ -200,6 +201,7 @@ export const Card = styled.div`
       }
       @media only screen and (max-width: 600px) {
         height: 18rem;
+        padding: 1.1rem 1rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {

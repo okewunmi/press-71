@@ -2,18 +2,19 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: rgba(232, 233, 237, 1);
-  padding: 3rem 5rem;
+  padding: 2rem 5rem;
+
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    padding: 3rem 5rem;
+    padding: 2rem 2rem;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    padding: 3rem 5rem;
+    padding: 2rem 2rem;
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    padding: 3rem 3.5rem;
+    padding: 2rem 2.5rem;
   }
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
@@ -30,6 +31,27 @@ export const Wrapper = styled.div`
     align-items: center;
     &--txt {
       font-size: 1.7rem;
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        font-size: 75%;
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        font-size: 85%;
+      }
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        font-size: 90%;
+      }
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        font-size: 95%;
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+        font-size: 1.7rem;
+      }
     }
   }
   .underline {
@@ -71,6 +93,7 @@ export const Wrapper = styled.div`
 `;
 export const Card = styled.div`
   display: grid;
+  margin-top: 2rem;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 14px;
@@ -80,46 +103,48 @@ export const Card = styled.div`
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 12px;
-    grid-row-gap: 15px;
+    grid-row-gap: 12px;
     place-items: center;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 12px;
-    grid-row-gap: 15px;
-    /* place-items: center; */
+    grid-row-gap: 12px;
+    place-items: center;
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 12px;
-    grid-row-gap: 15px;
-    /* place-items: center; */
+    grid-row-gap: 12px;
+    place-items: center;
   }
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 12px;
-    grid-row-gap: 15px;
-    /* place-items: center; */
+    grid-row-gap: 12px;
+    place-items: center;
   }
+
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 14px;
-    grid-row-gap: 13px;
-    /* place-items: center; */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    place-items: center;
   }
+
   .Premium__box {
     width: 19.2rem;
-    height: 7rem;
+    height: 5.5rem;
     display: flex;
     align-items: center;
     padding: 0.2rem 0.5rem;
@@ -140,29 +165,30 @@ export const Card = styled.div`
     }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-      width: 25rem;
+      width: 20rem;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
-      width: 23rem;
+      width: 22rem;
     }
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
-      width: 21rem;
+      width: 19rem;
     }
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
-      width: 19rem;
+      width: 18rem;
     }
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1200px) {
-      width: 21rem;
+      width: 18rem;
+      padding: 0.2rem 0.5rem;
     }
   }
   .Premium__img {
-    width: 3.6rem;
-    height: 3.6rem;
+    width: 3.4rem;
+    height: 3.4rem;
     border-radius: 50%;
     object-fit: cover;
   }
@@ -192,7 +218,7 @@ export const Card = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 0.8rem;
+    padding-left: 0.4rem;
   }
   .Premium__time {
     display: flex;
