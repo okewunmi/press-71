@@ -8,11 +8,17 @@ import Spinner from "../Spinner";
 //   "https://newsapi.org/v2/everything?q=nigeria&from=2023-05-19&to=2023-05-19&sortBy=popularity&apiKey=2f1de88abc15435a9d26cb175a34a7e7";
 
 // const url = "https://newsapi.org/v2/everything?q=nigeria";
-const mainUrl =
-  "https://newsapi.org/v2/everything?q=nigeria&pageSize=20&apiKey=2f1de88abc15435a9d26cb175a34a7e7";
+
+const todaysDate = new Date();
+const year = todaysDate.getFullYear();
+const month = todaysDate.getMonth() + 1;
+const day = todaysDate.getDate();
+const todaysDateFormated = [year, month, day].join("-");
+console.log(todaysDateFormated);
+
+const mainUrl = `https://newsapi.org/v2/everything?q=nigeria&from={todaysDateFormated}&to={todaysDateFormated}&pageSize=20&apiKey=2f1de88abc15435a9d26cb175a34a7e7`;
 const key = "apiKey=2f1de88abc15435a9d26cb175a34a7e7";
 const Index = () => {
-  const [nextPage, setNextPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -25,11 +31,12 @@ const Index = () => {
     };
     getNews();
   }, []);
+
   const date = "2023-05-19";
 
   const sortNews = async (value) => {
     const response = await fetch(
-      `https://newsapi.org/v2/everything?q=nigeria&pageSize=20&sortBy=${value}&pageSize=20&apiKey=2f1de88abc15435a9d26cb175a34a7e7`
+      `https://newsapi.org/v2/everything?q=nigeria&pageSize=20&from={todaysDateFormated}&to={todaysDateFormated}&sortBy=${value}&pageSize=20&apiKey=2f1de88abc15435a9d26cb175a34a7e7`
     );
     const data = await response.json();
     setData([...data.articles, ...data.articles]);
