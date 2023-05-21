@@ -441,7 +441,7 @@ export const Content = styled.div`
       transition: var(--transition);
 
       @media only screen and (max-width: 600px) {
-        width: 22rem;
+        width: 20rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
