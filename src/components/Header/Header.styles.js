@@ -375,7 +375,7 @@ export const Wrapper = styled.div`
         p {
           color: var(--grey);
           @media only screen and (max-width: 600px) {
-            font-size: 75%;
+            font-size: 70%;
           }
           /* Small devices (portrait tablets and large phones, 600px and up) */
           @media only screen and (min-width: 600px) {
