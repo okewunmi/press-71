@@ -5,15 +5,15 @@ export const Wrapper = styled.div`
   padding: 2rem 4rem;
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    padding: 1.2rem 6rem;
+    padding: 1.2rem 1.5rem;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    padding: 1.5rem 6rem;
+    padding: 1.5rem 1.5rem;
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 2rem;
   }
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
@@ -60,7 +60,6 @@ export const Wrapper = styled.div`
   }
   .btn-box {
     display: flex;
-
     text-transform: uppercase;
     align-items: center;
     font-size: 0.7rem;

@@ -6,11 +6,11 @@ export const Wrapper = styled.div`
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
@@ -25,32 +25,28 @@ export const Wrapper = styled.div`
   @media only screen and (min-width: 1200px) {
     padding: 3rem 5rem;
   }
-
+  h2 {
+    text-transform: uppercase;
+  }
   .heading {
     display: flex;
     align-items: center;
     &--txt {
       font-size: 1.7rem;
-      /* Extra small devices (phones, 600px and down) */
       @media only screen and (max-width: 600px) {
-        font-size: 75%;
+        font-size: 0.9rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
-        font-size: 85%;
+        font-size: 1rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
-        font-size: 90%;
+        font-size: 1.3rem;
       }
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
-        font-size: 95%;
-      }
-
-      /* Extra large devices (large laptops and desktops, 1200px and up) */
-      @media only screen and (min-width: 1200px) {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
       }
     }
   }
@@ -165,7 +161,7 @@ export const Card = styled.div`
     }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-      width: 20rem;
+      width: 22rem;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {

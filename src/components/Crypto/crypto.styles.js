@@ -6,11 +6,11 @@ export const Wrapper = styled.div`
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    padding: 2rem 2rem;
+    padding: 2rem 1.5rem;
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
@@ -37,11 +37,11 @@ export const Wrapper = styled.div`
       font-size: 1.7rem;
       /* Extra small devices (phones, 600px and down) */
       @media only screen and (max-width: 600px) {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
@@ -97,7 +97,7 @@ export const Wrapper = styled.div`
     }
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {
-      width: 20rem;
+      width: 22rem;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
@@ -193,9 +193,10 @@ export const Content = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 14px;
-    grid-row-gap: 13px;
+    grid-gap: 13px;
     place-items: center;
+    justify-items: center;
+    align-items: center;
 
     /* Extra small devices (phones, 600px and down) */
     @media only screen and (max-width: 600px) {

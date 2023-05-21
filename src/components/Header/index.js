@@ -206,14 +206,14 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <div className="content__btn">
+          {/* <div className="content__btn">
             <button className="btn" onClick={Next}>
               <HiArrowNarrowRight className="btn-width" />
             </button>
             <button className="btn" onClick={Prev}>
               <HiArrowNarrowLeft />
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="Premium">
           {loading && <Spinner />}

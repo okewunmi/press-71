@@ -184,6 +184,7 @@ export const Wrapper = styled.div`
     background: black;
     height: 5rem;
     display: flex;
+
     padding: 1rem;
     align-self: center;
     color: var(--grey);
@@ -195,6 +196,7 @@ export const Wrapper = styled.div`
     p {
       font-size: 0.75rem;
       color: var(--grey);
+      text-align: center;
     }
     a {
       color: var(--Blue-Gray);

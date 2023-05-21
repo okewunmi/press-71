@@ -7,11 +7,11 @@ export const Wrapper = styled.div`
   /* background: rgba(232, 233, 237, 0.3); */
 
   @media only screen and (max-width: 600px) {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
   }
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
@@ -441,11 +441,11 @@ export const Content = styled.div`
       transition: var(--transition);
 
       @media only screen and (max-width: 600px) {
-        width: 19rem;
+        width: 22rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
-        width: 19rem;
+        width: 22rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
