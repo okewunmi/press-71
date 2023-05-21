@@ -16,7 +16,8 @@ const day = todaysDate.getDate();
 const todaysDateFormated = [year, month, day].join("-");
 console.log(todaysDateFormated);
 
-const mainUrl = `https://newsapi.org/v2/everything?q=nigeria&from={todaysDateFormated}&to={todaysDateFormated}&pageSize=24&apiKey=2f1de88abc15435a9d26cb175a34a7e7`;
+const mainUrl =
+  "https://newsapi.org/v2/everything?q=nigeria&pageSize=24&apiKey=2f1de88abc15435a9d26cb175a34a7e7";
 
 const Index = () => {
   const [loading, setLoading] = useState(true);
@@ -34,7 +35,7 @@ const Index = () => {
 
   const sortNews = async (value) => {
     const response = await fetch(
-      `https://newsapi.org/v2/everything?q=nigeria&pageSize=24&from={todaysDateFormated}&to={todaysDateFormated}&sortBy=${value}&pageSize=20&apiKey=2f1de88abc15435a9d26cb175a34a7e7`
+      `https://newsapi.org/v2/everything?q=nigeria&pageSize=24&sortBy=${value}&pageSize=20&apiKey=2f1de88abc15435a9d26cb175a34a7e7`
     );
     const data = await response.json();
     setData([...data.articles]);
