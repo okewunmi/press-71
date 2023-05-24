@@ -54,14 +54,14 @@ const Politics = () => {
       <div className="heading">
         <h2 className="heading--txt">Politics</h2>
         <hr className="underline"></hr>
-        <div className="btn-box">
+        {/* <div className="btn-box">
           View more
           <button className="btn-box--cicle btn-box__white" onClick={loadMore}>
             <HiArrowNarrowRight />
           </button>
-        </div>
+        </div> */}
       </div>
-      {loading && <Spinner />}
+      {/* {loading && <Spinner />} */}
       <Card>
         {news &&
           news.length > 0 &&
@@ -110,6 +110,12 @@ const Politics = () => {
             );
           })}
       </Card>
+      <div className="btn-box">
+        View more
+        <button className="btn-box--cicle btn-box__white" onClick={loadMore}>
+          <HiArrowNarrowRight />
+        </button>
+      </div>
     </Wrapper>
   );
 };

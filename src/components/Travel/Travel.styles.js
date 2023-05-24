@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  background: rgba(232, 233, 237, 1);
+  /* background: rgba(232, 233, 237, 1); */
   padding: 2rem 4rem;
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
@@ -27,36 +27,40 @@ export const Wrapper = styled.div`
   .heading {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-transform: uppercase;
+
     &--txt {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
+      padding: 0 1rem;
+      background: var(--white);
+      position: absolute;
+      top: -1.8rem;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 1.2rem;
+      }
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) {
+        font-size: 1.2rem;
+      }
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) {
+        font-size: 1.3rem;
+      }
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) {
+        font-size: 1.5rem;
+      }
+      @media only screen and (min-width: 1200px) {
+        font-size: 1.6rem;
+      }
     }
   }
   .underline {
-    width: 75%;
-    border-bottom: 1px solid var(--lightGrey);
-    @media only screen and (max-width: 600px) {
-      display: none;
-    }
-    /* Small devices (portrait tablets and large phones, 600px and up) */
-    @media only screen and (min-width: 600px) {
-      width: 0%;
-    }
-    /* Medium devices (landscape tablets, 768px and up) */
-    @media only screen and (min-width: 768px) {
-      width: 65%;
-      border-bottom: 1px solid var(--lightGrey);
-    }
-    /* Large devices (laptops/desktops, 992px and up) */
-    @media only screen and (min-width: 992px) {
-      width: 70%;
-      border-bottom: 1px solid var(--lightGrey);
-    }
-
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
-      width: 75%;
-      border-bottom: 1px solid var(--lightGrey);
-    }
+    width: 100%;
+    border-bottom: 1px double var(--Blue-Gray);
   }
   .btn-box {
     display: flex;
@@ -72,13 +76,13 @@ export const Wrapper = styled.div`
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, 1);
+      /* border: 1px solid rgba(255, 255, 255, 1);
       box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
-        -3px -2px 5px 0 rgba(255, 255, 255, 1);
+        -3px -2px 5px 0 rgba(255, 255, 255, 1); */
       &:hover {
         cursor: pointer;
-        box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),
-          inset -1px -1px 3px 0 rgba(255, 255, 255, 1);
+        /* box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),
+          inset -1px -1px 3px 0 rgba(255, 255, 255, 1); */
         color: rgba(0, 255, 255, 1);
       }
       &__black {
@@ -88,8 +92,8 @@ export const Wrapper = styled.div`
         height: 2rem;
         border: 1px solid #333;
         background: rgba(0, 0, 0, 1);
-        box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
-          1px 1px 4px 0 rgba(0, 0, 0, 1);
+        /* box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
+          1px 1px 4px 0 rgba(0, 0, 0, 1); */
         transition: all 0.3s ease-in-out;
         color: var(--grey);
         margin-left: 0.8rem;
@@ -99,8 +103,8 @@ export const Wrapper = styled.div`
         :hover {
           color: var(--white);
           cursor: pointer;
-          box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
-            inset -1px -1px 4px 0 rgba(99, 99, 99, 1);
+          /* box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
+            inset -1px -1px 4px 0 rgba(99, 99, 99, 1); */
         }
       }
     }
@@ -125,16 +129,16 @@ export const Card = styled.div`
     background: rgba(0, 0, 0, 1);
     border-radius: 0.4rem;
     border: 2px solid #333;
-    box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
-      1px 1px 4px 0 rgba(0, 0, 0, 1);
+    /* box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
+      1px 1px 4px 0 rgba(0, 0, 0, 1); */
     cursor: pointer;
     transition: var(--transition);
     font-weight: bold;
 
     :active,
     :hover {
-      box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
-        inset -1px -1px 4px 0 rgba(99, 99, 99, 1);
+      /* box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
+        inset -1px -1px 4px 0 rgba(99, 99, 99, 1); */
       color: var(--white);
       cursor: pointer;
     }

@@ -26,7 +26,7 @@ const Travel = () => {
       `https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&q=traveling&language=en&country=ng&page=${page}`
     );
     const data = await response.json();
-    setTravelNews([...data.results, ...data.results]);
+    setTravelNews([...data.results]);
     setPage(data.nextPage);
     setLoading(false);
   };

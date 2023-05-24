@@ -102,7 +102,7 @@ const Header = () => {
     <Wrapper>
       <div className="nav">
         <div className="weather ">
-          <div className="right top">
+          <div className="right ">
             <MdOutlineLocationCity className="icon" />
             <p>lagos</p>
           </div>
@@ -115,11 +115,11 @@ const Header = () => {
           press<span>71</span>
         </h2>
         <div className="weather ">
-          <div className="right top-1">
+          <div className="right ">
             <FaCalendarAlt className="icon" />
             <p>{dayToDay(day)}</p>
           </div>
-          <div className="flex top">
+          <div className="flex top ">
             <FaNewspaper className="icon" />
             <p>today magasize</p>
           </div>
@@ -206,14 +206,14 @@ const Header = () => {
               </p>
             </div>
           </div>
-          {/* <div className="content__btn">
+          <div className="content__btn">
             <button className="btn" onClick={Next}>
               <HiArrowNarrowRight className="btn-width" />
             </button>
             <button className="btn" onClick={Prev}>
               <HiArrowNarrowLeft />
             </button>
-          </div> */}
+          </div>
         </div>
         <div className="Premium">
           {loading && <Spinner />}
@@ -258,78 +258,6 @@ const Header = () => {
               </section>
             );
           })}
-          {!searchTerm && (
-            <main>
-              {/* <div className="Premium__box">
-                <div className="Premium__img--box">
-                  <div className="Premium__img--circle">
-                    <p>72</p>
-                  </div>
-                  <img src={photo4} alt="imageurl" className="Premium__img" />
-                </div>
-                <div className="Premium__content">
-                  <div className="Premium__time">
-                    <p className="grey">recent post</p>
-                    <p className="blue-grey">9.00 pm</p>
-                  </div>
-                  <p className="Premium__time-txt">
-                    Osimhen names player he wants to emulate
-                  </p>
-                </div>
-              </div> */}
-              {/* <div className="Premium__box">
-                <div className="Premium__img--box">
-                  <div className="Premium__img--circle">
-                    <p>12</p>
-                  </div>
-                  <img src={photo1} alt="imageurl" className="Premium__img" />
-                </div>
-                <div className="Premium__content">
-                  <div className="Premium__time">
-                    <p className="grey">recent post</p>
-                    <p className="blue-grey">9.00 pm</p>
-                  </div>
-                  <p className="Premium__time-txt">
-                    Osimhen names player he wants to emulate
-                  </p>
-                </div>
-              </div> */}
-              {/* <div className="Premium__box">
-                <div className="Premium__img--box">
-                  <div className="Premium__img--circle">
-                    <p>23</p>
-                  </div>
-                  <img src={photo4} alt="imageurl" className="Premium__img" />
-                </div>
-                <div className="Premium__content">
-                  <div className="Premium__time">
-                    <p className="grey">recent post</p>
-                    <p className="blue-grey">9.00 pm</p>
-                  </div>
-                  <p className="Premium__time-txt">
-                    Osimhen names player he wants to emulate
-                  </p>
-                </div>
-              </div> */}
-              {/* <div className="Premium__box">
-                <div className="Premium__img--box">
-                  <div className="Premium__img--circle">
-                    <p>10</p>
-                  </div>
-                  <img src={photo2} alt="imageurl" className="Premium__img" />
-                </div>
-                <div className="Premium__content">
-                  <div className="Premium__time">
-                    <p className="grey">recent post</p>
-                    <p className="blue-grey">9.00 pm</p>
-                  </div>
-                  <p className="Premium__time-txt">
-                    Osimhen names player he wants to emulate
-                  </p>
-                </div>
-              </div> */}
-            </main>
-          )}
         </div>
       </div>
     </Wrapper>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 export const Wrapper = styled.div`
-  background: rgba(232, 233, 237, 1);
+  /* background: rgba(232, 233, 237, 1); */
   /* padding: 0 4rem; */
   min-height: 10rem;
   color: #000;
@@ -11,13 +11,13 @@ export const Wrapper = styled.div`
     border-bottom: 1px solid var(--grey);
     &-btn {
       width: 100%;
-      padding: 1.7rem 0;
+      padding: 1.5rem 0;
       font-size: 1rem;
       font-weight: bold;
       text-transform: uppercase;
       outline: none;
       border: none;
-      background: rgba(232, 233, 237, 1);
+      background: var(--white);
       transition: all 0.3s;
 
       :hover,
@@ -41,13 +41,13 @@ export const Wrapper = styled.div`
       color: red;
       font-weight: bold;
       border: 1px solid rgba(255, 255, 255, 1);
-      box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
-        -3px -2px 5px 0 rgba(255, 255, 255, 1);
+      /* box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
+        -3px -2px 5px 0 rgba(255, 255, 255, 1); */
       &:hover {
         cursor: pointer;
-        box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),
+        /* box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),
           inset -1px -1px 3px 0 rgba(255, 255, 255, 1);
-        color: rgba(0, 255, 255, 1);
+        color: rgba(0, 255, 255, 1); */
       }
     }
   }
@@ -59,14 +59,14 @@ export const Wrapper = styled.div`
     padding: 0.2rem 0.5rem;
     background: rgba(232, 233, 237, 1);
     border-radius: 0.4rem;
-    border: 1px solid rgba(255, 255, 255, 1);
+    /* border: 1px solid rgba(255, 255, 255, 1);
     box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
-      -3px -2px 5px 0 rgba(255, 255, 255, 1);
+      -3px -2px 5px 0 rgba(255, 255, 255, 1); */
 
     &:hover {
       cursor: pointer;
-      box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),
-        inset -1px -1px 3px 0 rgba(255, 255, 255, 1);
+      /* box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),
+        inset -1px -1px 3px 0 rgba(255, 255, 255, 1); */
       color: rgba(0, 255, 255, 1);
     }
     a {

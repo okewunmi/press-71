@@ -3,7 +3,7 @@ import photo from "../../assets/img-5.jpg";
 
 export const Wrapper = styled.div`
   padding: 3rem 5rem 7.5rem 5rem;
-  background: rgba(232, 233, 237, 1);
+  /* background: rgba(232, 233, 237, 1); */
   /* background: rgba(232, 233, 237, 0.3); */
 
   @media only screen and (max-width: 600px) {

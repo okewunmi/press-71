@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   /* background: #000; */
   background-size: 100%, cover;
   background-position: center;
-  height: 90vh;
+  height: 95vh;
   @media only screen and (max-width: 600px) {
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -34,60 +34,86 @@ export const Wrapper = styled.div`
   color: #fff;
 
   .nav {
-    height: 5.5rem;
+    height: 7rem;
     text-transform: uppercase;
     display: flex;
     justify-content: space-between;
-    padding: 0 3rem;
+    padding: 1rem 3rem;
     align-items: center;
     border-bottom: 1px solid var(--grey);
+    align-items: center;
+
     @media only screen and (max-width: 600px) {
+      height: 4.5rem;
+      padding: 0 2rem;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
+      height: 5rem;
+      align-items: center;
+      padding: 0 2rem;
     }
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
+      height: 5rem;
+      align-items: center;
+      padding: 0 2rem;
     }
-    @media only screen and (max-width: 850px) {
-      flex-direction: column;
+    @media only screen and (min-width: 850px) {
+      // flex-direction: column;
+      height: 5.5rem;
+      align-items: center;
+      padding: 1rem 2rem;
 
       /* align-items: flex-start; */
     }
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
+      height: 6rem;
+      align-items: center;
+      padding: 1rem 2rem;
     }
 
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1200px) {
+      align-items: center;
+      height: 7rem;
+      padding: 0 3rem;
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
+
       @media only screen and (max-width: 600px) {
         order: -1;
         align-self: flex-start;
+        font-size: 1.35rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
         order: -1;
         align-self: flex-start;
+        font-size: 1.4rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
+        font-size: 1.45rem;
       }
-      @media only screen and (max-width: 850px) {
+      @media only screen and (min-width: 850px) {
         order: -1;
         align-self: flex-start;
+        font-size: 1.5rem;
       }
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
         order: 0;
         align-self: center;
+        font-size: 1.6rem;
       }
 
       /* Extra large devices (large laptops and desktops, 1200px and up) */
       @media only screen and (min-width: 1200px) {
+        font-size: 1.7rem;
       }
       span {
         color: red;
@@ -98,21 +124,49 @@ export const Wrapper = styled.div`
       padding-right: 5px;
       font-size: 1.1rem;
       @media only screen and (max-width: 850px) {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
       }
     }
     .weather {
       display: flex;
+
+      p {
+        font-size: 11px;
+        font-weight: 400;
+        @media only screen and (max-width: 600px) {
+          font-size: 10px;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+          font-size: 11px;
+        }
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+          font-size: 11px;
+        }
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+          font-size: 11px;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+          font-size: 11px;
+        }
+      }
+
       @media only screen and (max-width: 600px) {
+        margin-top: -0.8rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
+        margin-top: -1rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
+        margin-top: -1rem;
       }
       @media only screen and (max-width: 850px) {
-        align-self: flex-end;
       }
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
@@ -130,17 +184,18 @@ export const Wrapper = styled.div`
         align-items: center;
       }
       p {
-        font-size: 12px;
+        font-size: 11px;
+        font-weight: 400;
         @media only screen and (max-width: 600px) {
-          font-size: 9px;
+          font-size: 10px;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {
-          font-size: 9px;
+          font-size: 11px;
         }
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
-          font-size: 10px;
+          font-size: 11px;
         }
         /* Large devices (laptops/desktops, 992px and up) */
         @media only screen and (min-width: 992px) {
@@ -149,12 +204,11 @@ export const Wrapper = styled.div`
 
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1200px) {
-          font-size: 12px;
+          font-size: 11px;
         }
       }
       .top {
         @media only screen and (max-width: 850px) {
-          margin-top: -5rem;
           display: none;
         }
       }
@@ -167,9 +221,38 @@ export const Wrapper = styled.div`
   }
   .nav-section {
     display: flex;
-    padding: 1.5rem 3rem;
-    align-items: center;
+    padding: 1.5rem 2rem;
+    // align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      padding: 1rem 2rem;
+    }
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+      flex-direction: column;
+      padding: 1rem 2rem;
+    }
+    /* Medium devices (landscape tablets, 768px and up) */
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      padding: 1.1rem 2rem;
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+      flex-direction: row;
+      align-items: center;
+      padding: 1.2rem 2rem;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+      flex-direction: row;
+      align-items: center;
+      padding: 1.5rem 2rem;
+    }
 
     .nav-btn {
       display: flex;
@@ -178,8 +261,8 @@ export const Wrapper = styled.div`
       scroll-behavior: smooth;
       overscroll-behavior-inline: contain;
       scroll-snap-type: inline mandatory;
-      padding: 0.5rem 0.7rem;
-      width: 60%;
+      padding: 0.5rem;
+      width: 90%;
       padding-bottom: 0.7rem;
 
       .has-scrollbar::-webkit-scrollbar {
@@ -209,15 +292,15 @@ export const Wrapper = styled.div`
         color: var(--white);
         transition: all 0.3s;
         padding: 0.4rem 0.5rem;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         display: block;
 
         @media only screen and (max-width: 600px) {
-          font-size: 60%;
+          font-size: 70%;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {
-          font-size: 65%;
+          font-size: 75%;
         }
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
@@ -230,7 +313,7 @@ export const Wrapper = styled.div`
 
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1200px) {
-          font-size: 90%;
+          font-size: 85%;
         }
 
         :hover,
@@ -252,10 +335,34 @@ export const Wrapper = styled.div`
       form {
         display: flex;
         align-items: center;
+        @media only screen and (max-width: 600px) {
+          display: none;
+        }
+        /* Small devices (portrait tablets and large phones, 600px and up) */
+        @media only screen and (min-width: 600px) {
+          display: none;
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px) {
+          display: flex;
+          align-items: center;
+        }
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {
+          display: flex;
+          align-items: center;
+        }
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media only screen and (min-width: 1200px) {
+          display: flex;
+          align-items: center;
+        }
       }
       .input-search {
         height: 1rem;
-        width: 10rem;
+        width: 12rem;
         border-radius: 1rem;
         padding: 0.85rem 1rem 0.85rem 2rem;
         color: var(--white);
@@ -266,21 +373,21 @@ export const Wrapper = styled.div`
         transition: all 0.4s;
         border: none;
         background: #20222d;
-        box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
+        /* box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
           inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
           inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4);
-        transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; */
 
         &:focus,
         &:active {
-          width: 12rem;
+          width: 14rem;
           outline: none;
-          box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
+          /* box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
             inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
             inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4),
             5px 5px 10px 2.5px rgba(0, 0, 0, 0.2),
             -5px -5px 10px 2.5px rgba(77, 71, 100, 0.4),
-            -1px -1px 4px 2px rgba(77, 71, 100, 0.4);
+            -1px -1px 4px 2px rgba(77, 71, 100, 0.4); */
         }
         @media only screen and (max-width: 600px) {
         }
@@ -319,15 +426,15 @@ export const Wrapper = styled.div`
     justify-content: space-between;
     padding: 1.5rem 3rem;
     @media only screen and (max-width: 600px) {
-      padding: 1.5rem 2rem;
+      padding: 1.5rem 1.5rem;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
-      padding: 1.5rem 2rem;
+      padding: 1.5rem 1.5rem;
     }
     /* Medium devices (landscape tablets, 768px and up) */
     @media only screen and (min-width: 768px) {
-      padding: 1.5rem 2.3rem;
+      padding: 1.5rem 2rem;
     }
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
@@ -341,17 +448,17 @@ export const Wrapper = styled.div`
 
     .text {
       display: flex;
-      width: 42%;
+      width: 50%;
       align-content: space-around;
       flex-direction: column;
       height: 100%;
 
       @media only screen and (max-width: 600px) {
-        width: 50%;
+        width: 100%;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
-        width: 50%;
+        width: 100%;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
@@ -359,12 +466,12 @@ export const Wrapper = styled.div`
       }
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
-        width: 45%;
+        width: 50%;
       }
 
       /* Extra large devices (large laptops and desktops, 1200px and up) */
       @media only screen and (min-width: 1200px) {
-        width: 42%;
+        width: 46%;
       }
       .heading {
         margin-bottom: -1rem;
@@ -406,27 +513,27 @@ export const Wrapper = styled.div`
             color: var(--white);
           }
           @media only screen and (max-width: 600px) {
-            font-size: 1rem;
+            font-size: 1.15rem;
             line-height: 1.2;
-            font-weight: 400;
+            font-weight: 600;
           }
           /* Small devices (portrait tablets and large phones, 600px and up) */
           @media only screen and (min-width: 600px) {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             line-height: 1.2;
-            font-weight: 400;
+            font-weight: 600;
           }
           /* Medium devices (landscape tablets, 768px and up) */
           @media only screen and (min-width: 768px) {
             font-size: 1.4rem;
             line-height: 1.2;
-            font-weight: 400;
+            font-weight: 600;
           }
           /* Large devices (laptops/desktops, 992px and up) */
           @media only screen and (min-width: 992px) {
-            font-size: 1.45rem;
+            font-size: 1.5rem;
             line-height: 1.2;
-            font-weight: 500;
+            font-weight: 600;
           }
 
           /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -439,7 +546,7 @@ export const Wrapper = styled.div`
         &__txt {
           width: 80%;
           margin-top: -1rem;
-          font-size: 0.65rem;
+          font-size: 0.7rem;
           font-weight: 600;
           line-height: 1.4;
           word-spacing: 1px;
@@ -453,15 +560,15 @@ export const Wrapper = styled.div`
         align-items: center;
         justify-content: space-between;
         @media only screen and (max-width: 600px) {
-          width: 80%;
+          width: 85%;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {
-          width: 80%;
+          width: 70%;
         }
         /* Medium devices (landscape tablets, 768px and up) */
         @media only screen and (min-width: 768px) {
-          width: 80%;
+          width: 70%;
         }
         /* Large devices (laptops/desktops, 992px and up) */
         @media only screen and (min-width: 992px) {
@@ -470,36 +577,36 @@ export const Wrapper = styled.div`
 
         /* Extra large devices (large laptops and desktops, 1200px and up) */
         @media only screen and (min-width: 1200px) {
-          width: 60%;
+          width: 62%;
         }
         p {
           font-size: 0.8rem;
-          font-weight: 300;
+          font-weight: 400;
           text-transform: uppercase;
           @media only screen and (max-width: 600px) {
-            font-size: 0.55rem;
-            font-weight: 300;
+            font-size: 0.6rem;
+            font-weight: 400;
           }
           /* Small devices (portrait tablets and large phones, 600px and up) */
           @media only screen and (min-width: 600px) {
-            font-size: 0.55rem;
-            font-weight: 300;
+            font-size: 0.6rem;
+            font-weight: 400;
           }
           /* Medium devices (landscape tablets, 768px and up) */
           @media only screen and (min-width: 768px) {
-            font-size: 0.6rem;
-            font-weight: 300;
+            font-size: 0.65rem;
+            font-weight: 400;
           }
           /* Large devices (laptops/desktops, 992px and up) */
           @media only screen and (min-width: 992px) {
-            font-size: 0.65rem;
-            font-weight: 300;
+            font-size: 0.75rem;
+            font-weight: 400;
           }
 
           /* Extra large devices (large laptops and desktops, 1200px and up) */
           @media only screen and (min-width: 1200px) {
-            font-size: 0.75rem;
-            font-weight: 300;
+            font-size: 0.8rem;
+            font-weight: 400;
           }
         }
 
@@ -542,27 +649,28 @@ export const Wrapper = styled.div`
       }
 
       .btn {
-        border: 1px solid var(--grey);
+        /* border: 1px solid var(--grey); */
         display: block;
         height: 2.8rem;
         width: 2.8rem;
         border: 1px solid #333;
         background: rgba(0, 0, 0, 1);
         /* background: #20222d; */
-        box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
-          1px 1px 4px 0 rgba(0, 0, 0, 1);
+        /* box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
+          1px 1px 4px 0 rgba(0, 0, 0, 1); */
         transition: all 0.3s ease-in-out;
         color: var(--grey);
-        margin-right: 1rem;
+        margin-right: 1.3rem;
         border-radius: 50%;
         transition: all 0.3s;
 
         :hover {
           color: var(--white);
-          /* border: 2px solid var(--white); */
+          border: 2px solid var(--white);
+          transform: scale(1.3);
           cursor: pointer;
-          box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
-            inset -1px -1px 4px 0 rgba(99, 99, 99, 1);
+          /* box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
+            inset -1px -1px 4px 0 rgba(99, 99, 99, 1); */
         }
         @media only screen and (max-width: 600px) {
           height: 2.1rem;
@@ -661,14 +769,14 @@ export const Wrapper = styled.div`
         background: rgba(0, 0, 0, 0.5);
         border-radius: 0.4rem;
         border: 1px solid #333;
-        box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
-          1px 1px 4px 0 rgba(0, 0, 0, 1);
+        /* box-shadow: -1px -1px 4px 0 rgba(99, 99, 99, 1),
+          1px 1px 4px 0 rgba(0, 0, 0, 1); */
         margin-bottom: 0.7rem;
 
         &:hover {
           cursor: pointer;
-          box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
-            inset -1px -1px 4px 0 rgba(99, 99, 99, 1);
+          /* box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
+            inset -1px -1px 4px 0 rgba(99, 99, 99, 1); */
         }
       }
       &__img {

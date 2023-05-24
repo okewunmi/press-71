@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Wrapper = styled.div`
   padding: 3rem 6rem;
-  background: rgba(232, 233, 237, 1);
+  /* background: rgba(232, 233, 237, 1); */
 
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
