@@ -667,7 +667,7 @@ export const Wrapper = styled.div`
         :hover {
           color: var(--white);
           border: 2px solid var(--white);
-          transform: scale(1.3);
+          transform: scale(1);
           cursor: pointer;
           /* box-shadow: inset 1px 1px 4px 0 rgba(0, 0, 0, 1),
             inset -1px -1px 4px 0 rgba(99, 99, 99, 1); */

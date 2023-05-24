@@ -436,8 +436,8 @@ export const Content = styled.div`
       background: rgba(232, 233, 237, 1);
       border-radius: 0.3rem;
       border: 1px solid rgba(255, 255, 255, 1);
-      box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
-        -3px -2px 5px 0 rgba(255, 255, 255, 1);
+      /* box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
+        -3px -2px 5px 0 rgba(255, 255, 255, 1); */
       transition: var(--transition);
 
       @media only screen and (max-width: 600px) {
@@ -461,8 +461,8 @@ export const Content = styled.div`
       }
       &:hover {
         cursor: pointer;
-        box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),
-          inset -1px -1px 3px 0 rgba(255, 255, 255, 1);
+        /* box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),
+          inset -1px -1px 3px 0 rgba(255, 255, 255, 1); */
         color: rgba(0, 255, 255, 1);
         transform: translateX(1rem);
       }
