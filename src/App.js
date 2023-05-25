@@ -8,11 +8,13 @@ import Travel from "./components/Travel";
 import Footer from "./components/Footer";
 import "./index.css";
 import Politics from "./components/Politics";
+import Business from "./components/Business";
 function App() {
   return (
     <>
       <Header />
       <AllNews />
+      <Business />
       <CryptoNews />
       <Politics />
       <Contact />

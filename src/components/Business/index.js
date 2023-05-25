@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Wrapper, Card } from "./Travel.styles";
+import { Wrapper, Card } from "./Business.styles";
 import Spinner from "../Spinner";
 import { HiArrowNarrowRight } from "react-icons/hi";
 
 const url =
-  "https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&q=traveling&language=en&country=ng";
-const Travel = () => {
+  "https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&q=business&language=en&country=ng";
+const Business = () => {
   const [travelNews, setTravelNews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(null);
@@ -33,7 +33,7 @@ const Travel = () => {
   return (
     <Wrapper>
       <div className="heading">
-        <h2 className="heading--txt">Traveling</h2>
+        <h2 className="heading--txt">Business</h2>
         <hr className="underline"></hr>
         <div className="btn-box hide">
           View more
@@ -98,4 +98,4 @@ const Travel = () => {
   );
 };
 
-export default Travel;
+export default Business;

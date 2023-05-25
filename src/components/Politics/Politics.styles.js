@@ -45,21 +45,26 @@ export const Wrapper = styled.div`
 
       @media only screen and (max-width: 600px) {
         font-size: 1.2rem;
+        top: -1.2rem;
       }
       /* Small devices (portrait tablets and large phones, 600px and up) */
       @media only screen and (min-width: 600px) {
         font-size: 1.2rem;
+        top: -1.2rem;
       }
       /* Medium devices (landscape tablets, 768px and up) */
       @media only screen and (min-width: 768px) {
         font-size: 1.3rem;
+        top: -1.4rem;
       }
       /* Large devices (laptops/desktops, 992px and up) */
       @media only screen and (min-width: 992px) {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+        top: -1.8rem;
       }
       @media only screen and (min-width: 1200px) {
         font-size: 1.6rem;
+        top: -1.8rem;
       }
     }
   }
@@ -68,7 +73,9 @@ export const Wrapper = styled.div`
     border-bottom: 1px double var(--Blue-Gray);
   }
   .btn-box {
+    margin-top: 1rem;
     display: flex;
+    align-items: center;
     text-transform: uppercase;
     align-items: center;
     font-size: 0.7rem;
@@ -77,19 +84,22 @@ export const Wrapper = styled.div`
 
     color: var(--black);
     &--cicle {
+      display: flex;
+      align-items: center;
       margin-left: 0.8rem;
       outline: none;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      /* border: 1px solid rgba(255, 255, 255, 1);
+      padding: 0.8rem 1.3rem;
+      transition: all 0.3s;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 1);
       box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
-        -3px -2px 5px 0 rgba(255, 255, 255, 1); */
+        -3px -2px 5px 0 rgba(255, 255, 255, 1);
       &:hover {
         cursor: pointer;
         /* box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),
           inset -1px -1px 3px 0 rgba(255, 255, 255, 1); */
-        color: rgba(0, 255, 255, 1);
+        transform: translateY(0.5rem);
+        color: red;
       }
     }
   }
@@ -147,7 +157,7 @@ export const Card = styled.div`
 
   .Premium__box {
     width: 19.2rem;
-    height: 5.5rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     padding: 0.2rem 0.5rem;

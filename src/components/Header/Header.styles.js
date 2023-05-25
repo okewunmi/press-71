@@ -531,7 +531,7 @@ export const Wrapper = styled.div`
           }
           /* Large devices (laptops/desktops, 992px and up) */
           @media only screen and (min-width: 992px) {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             line-height: 1.2;
             font-weight: 600;
           }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const Wrapper = styled.div`
   /* background: rgba(232, 233, 237, 1); */
-  /* padding: 0 4rem; */
+  padding-bottom: 1.5rem;
   min-height: 10rem;
   color: #000;
   .container {
@@ -53,7 +53,7 @@ export const Wrapper = styled.div`
   }
   .Premium__box {
     width: 19.2rem;
-    height: 5.5rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     padding: 0.2rem 0.5rem;

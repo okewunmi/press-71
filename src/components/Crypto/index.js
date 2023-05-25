@@ -80,9 +80,8 @@ const Crypto = () => {
                     <div>
                       <p className="Premium__time-txt">
                         <a href={link}>
-                          {title
-                            ? title.slice(0, 100).concat("....")
-                            : "North Korea Is Now Mining Crypto to Launder Its Stolen Loot"}
+                          {title ||
+                            "North Korea Is Now Mining Crypto to Launder Its Stolen Loot"}
                         </a>
                       </p>
                     </div>

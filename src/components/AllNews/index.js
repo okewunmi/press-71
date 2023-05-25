@@ -113,9 +113,8 @@ const Index = () => {
                     <div>
                       <p className="Premium__time-txt">
                         <a href={url}>
-                          {title
-                            ? title.slice(0, 95).concat("....")
-                            : "North Korea Is Now Mining Crypto to Launder Its Stolen Loot"}
+                          {title ||
+                            "North Korea Is Now Mining Crypto to Launder Its Stolen Loot"}
                         </a>
                       </p>
                     </div>

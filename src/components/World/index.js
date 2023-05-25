@@ -104,9 +104,8 @@ const World = () => {
                     <div>
                       <p className="Premium__time-txt">
                         <a href={link}>
-                          {title
-                            ? title.slice(0, 150).concat("....")
-                            : "North Korea Is Now Mining Crypto to Launder Its Stolen Loot"}
+                          {title ||
+                            "North Korea Is Now Mining Crypto to Launder Its Stolen Loot"}
                         </a>
                       </p>
                     </div>
