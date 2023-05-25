@@ -14,6 +14,16 @@ export const Wrapper = styled.div`
   background-position: center;
   height: 95vh;
   @media only screen and (max-width: 600px) {
+    background: radial-gradient(
+        circle at center,
+        rgba(169, 169, 169, 0.1) 15%,
+        rgba(0, 0, 0) 60%
+      ),
+      url(${photo});
+    /* background: #000; */
+    background-size: 100%, cover;
+    background-position: center;
+    height: 75vh;
   }
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (max-width: 600px) {
@@ -32,7 +42,23 @@ export const Wrapper = styled.div`
   @media only screen and (min-width: 1200px) {
   }
   color: #fff;
-
+  .clear__all {
+    border: none;
+    outline: none;
+    background: none;
+    color: red;
+    font-size: 0.1rem;
+    font-weight: bolder;
+    transition: all 0.3s;
+    cursor: pointer;
+    :hover {
+      color: var(--Blue-Gray);
+      transform: scale(0.9);
+    }
+    :active {
+      color: #000;
+    }
+  }
   .nav {
     height: 7rem;
     text-transform: uppercase;
@@ -366,21 +392,21 @@ export const Wrapper = styled.div`
         border-radius: 1rem;
         padding: 0.85rem 1rem 0.85rem 2rem;
         color: var(--white);
-        font-size: 0.7rem;
+        font-size: 0.85rem;
         /* font-weight: 100; */
         z-index: 1;
         position: relative;
-        transition: all 0.4s;
+        transition: all 0.2s linear;
         border: none;
         background: #20222d;
         /* box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
           inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
-          inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4);
-        transition: all 0.2s ease-in-out; */
+          inset -1px -2px 2px 0px rgba(77, 71, 100, 0.4);*/
+        transition: all 0.2s ease-in-out;
 
         &:focus,
         &:active {
-          width: 14rem;
+          width: 15rem;
           outline: none;
           /* box-shadow: inset 5px 5px 8px 1px rgba(0, 0, 0, 0.2),
             inset -5px -5px 8px 0px rgba(77, 71, 100, 0.3),
@@ -427,6 +453,7 @@ export const Wrapper = styled.div`
     padding: 1.5rem 3rem;
     @media only screen and (max-width: 600px) {
       padding: 1.5rem 1.5rem;
+      margin-top: -1rem;
     }
     /* Small devices (portrait tablets and large phones, 600px and up) */
     @media only screen and (min-width: 600px) {
@@ -513,7 +540,7 @@ export const Wrapper = styled.div`
             color: var(--white);
           }
           @media only screen and (max-width: 600px) {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             line-height: 1.2;
             font-weight: 600;
           }
@@ -544,7 +571,7 @@ export const Wrapper = styled.div`
           }
         }
         &__txt {
-          width: 80%;
+          width: 88%;
           margin-top: -1rem;
           font-size: 0.7rem;
           font-weight: 600;
@@ -561,6 +588,7 @@ export const Wrapper = styled.div`
         justify-content: space-between;
         @media only screen and (max-width: 600px) {
           width: 85%;
+          margin-top: -0.2rem;
         }
         /* Small devices (portrait tablets and large phones, 600px and up) */
         @media only screen and (min-width: 600px) {

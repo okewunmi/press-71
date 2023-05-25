@@ -191,7 +191,7 @@ const Header = () => {
 
             <p className="title__txt">
               {description
-                ? description.slice(0, 100).concat(" ...")
+                ? description.slice(0, 90).concat(" ...")
                 : "The National Drug Law Enforcement Agency has intercepted 2.7kg of cannabis concealed...."}
             </p>
           </div>
@@ -206,17 +206,25 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <div className="content__btn">
+          {/* <div className="content__btn">
             <button className="btn" onClick={Next}>
               <HiArrowNarrowRight className="btn-width" />
             </button>
             <button className="btn" onClick={Prev}>
               <HiArrowNarrowLeft />
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="Premium">
           {loading && <Spinner />}
+          {search.length > 0 && (
+            <div>
+              <button className="clear__all" onClick={() => setSearch([])}>
+                <p>Clear All</p>
+              </button>
+            </div>
+          )}
+
           {search.map((items, index) => {
             const { link, pubDate, title, image_url } = items;
             const newObject = new Date(pubDate);
