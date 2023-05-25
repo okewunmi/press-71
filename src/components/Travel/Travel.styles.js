@@ -76,9 +76,9 @@ export const Wrapper = styled.div`
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
-      /* border: 1px solid rgba(255, 255, 255, 1);
+      /* border: 1px solid rgba(255, 255, 255, 1); */
       box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
-        -3px -2px 5px 0 rgba(255, 255, 255, 1); */
+        -3px -2px 5px 0 rgba(255, 255, 255, 1);
       &:hover {
         cursor: pointer;
         /* box-shadow: inset 1px 1px 3px 0 rgba(196, 196, 196, 1),

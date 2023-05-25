@@ -435,9 +435,9 @@ export const Content = styled.div`
       padding: 0.4rem 0.5rem;
       background: rgba(232, 233, 237, 1);
       border-radius: 0.3rem;
-      border: 1px solid rgba(255, 255, 255, 1);
-      /* box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
-        -3px -2px 5px 0 rgba(255, 255, 255, 1); */
+      /* border: 1px solid rgba(255, 255, 255, 1); */
+      box-shadow: 3px 2px 3px 0 rgba(196, 196, 196, 1),
+        -3px -2px 5px 0 rgba(255, 255, 255, 1);
       transition: var(--transition);
 
       @media only screen and (max-width: 600px) {
