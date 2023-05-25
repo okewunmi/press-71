@@ -5,7 +5,7 @@ import { MdOutlineLocationCity } from "react-icons/md";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { FaCalendarAlt, FaNewspaper } from "react-icons/fa";
 import { TbPointFilled } from "react-icons/tb";
-import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
+// import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 import { BiSearch } from "react-icons/bi";
 import photo5 from "../../assets/preniun.jpg";
 // import photo4 from "../../assets/img-2.jpeg";
