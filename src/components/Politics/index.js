@@ -8,23 +8,22 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 //   AiOutlineLike,
 // } from "react-icons/ai";
 import photo1 from "../../assets/img-4.jpg";
-import Spinner from "../Spinner";
+// import Spinner from "../Spinner";
 const Politics = () => {
   const url =
     "https://newsdata.io/api/1/news?apikey=pub_190253e826e13c8df31ac656b1975f4e9e42a&country=ng&category=politics";
 
   const [news, setNews] = useState([]);
   const [nextPage, setNextPage] = useState(0);
-  const [loading, setLoading] = useState(false);
+
   // const [changeColor, setChangeColor] = useState(false);
 
   useEffect(() => {
     const getNews = async () => {
-      setLoading(true);
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setLoading(false);
+
         setNews(data.results);
         setNextPage(data.nextPage);
       } catch (err) {
@@ -41,7 +40,6 @@ const Politics = () => {
     const data = await response.json();
     setNews([...data.results, ...data.results]);
     setNextPage(data.nextPage);
-    setLoading(false);
   };
 
   return (

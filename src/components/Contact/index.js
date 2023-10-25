@@ -1,7 +1,7 @@
 import React from "react";
 import { Wrapper } from "./Contact.styles";
 import { HiArrowNarrowRight } from "react-icons/hi";
-import { TiWeatherPartlySunny } from "react-icons/ti";
+// import { TiWeatherPartlySunny } from "react-icons/ti";
 import {
   TiSocialFacebook,
   TiSocialTwitter,

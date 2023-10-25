@@ -156,7 +156,7 @@ export const Card = styled.div`
   }
 
   .Premium__box {
-    width: 19.2rem;
+    width: 19rem;
     height: 6rem;
     display: flex;
     align-items: center;

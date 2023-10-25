@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Wrapper, Content } from "./World.styles";
-import { TbPointFilled } from "react-icons/tb";
-import Spinner from "../Spinner";
+// import { TbPointFilled } from "react-icons/tb";
+// import Spinner from "../Spinner";
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 import photo4 from "../../assets/img-5.jpg";
 import photo1 from "../../assets/img-4.jpg";
@@ -11,17 +11,15 @@ const url =
 const World = () => {
   const [news, setNews] = useState([]);
   const [nextPage, setNextPage] = useState(0);
-  const [index, setIndex] = useState(0);
-  const [slide, setSlide] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // const [index, setIndex] = useState(0);
+  // const [slide, setSlide] = useState([]);
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const getCrypto = async () => {
-      setLoading(true);
       try {
         const response = await fetch(url);
         const data = await response.json();
-        setLoading(false);
         setNews(data.results);
         setNextPage(data.nextPage);
       } catch (err) {
@@ -30,18 +28,18 @@ const World = () => {
     };
     getCrypto();
   }, []);
-  const nextNews = () => {
-    setIndex((index) => {
-      let newIndex = index + 1;
-      return newIndex;
-    });
-  };
-  const prevNews = () => {
-    setIndex((index) => {
-      let newIndex = index - 1;
-      return newIndex;
-    });
-  };
+  // const nextNews = () => {
+  //   setIndex((index) => {
+  //     let newIndex = index + 1;
+  //     return newIndex;
+  //   });
+  // };
+  // const prevNews = () => {
+  //   setIndex((index) => {
+  //     let newIndex = index - 1;
+  //     return newIndex;
+  //   });
+  // };
   // const half = Math.ceil(news.results.length / 2);
   const firstHalf = news.slice(0, 5);
   const secondHalf = news.slice(5, 10);
@@ -53,10 +51,9 @@ const World = () => {
     const data = await response.json();
     setNews([...data.results, ...data.results]);
     setNextPage(data.nextPage);
-    setLoading(false);
   };
-  const { link, pubDate, title, creator, image_url } = news;
-
+  // const { link, pubDate, title, creator, image_url } = news;
+  const { link, title } = news;
   return (
     <Wrapper>
       <div className="heading">
@@ -117,10 +114,10 @@ const World = () => {
 
         <div className="center">
           <div className="center__btn">
-            <button className="btn--arrow" disabled={true} onClick={prevNews}>
+            <button className="btn--arrow" disabled={true}>
               <HiArrowNarrowLeft />
             </button>
-            <button className="btn--arrow" disabled={true} onClick={nextNews}>
+            <button className="btn--arrow" disabled={true}>
               <HiArrowNarrowRight />
             </button>
           </div>

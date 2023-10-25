@@ -89,7 +89,7 @@ export const Wrapper = styled.div`
       }
     }
     .box {
-      width: 24rem;
+      width: 23rem;
       height: 13rem;
       border: 1px solid var(--grey);
       border-radius: 4px;

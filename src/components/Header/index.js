@@ -21,11 +21,11 @@ const tempUrl =
 
 const Header = () => {
   const [news, setNews] = useState(0);
-  const [buttonValues, setButtonsValues] = useState([]);
+  const [setButtonsValues] = useState([]);
   // const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState([]);
-  const [index, setIndex] = useState(0);
+
   const [searchTerm, setSearchTerm] = useState("");
 
   const btnfetch = async (value) => {
@@ -50,28 +50,7 @@ const Header = () => {
   useEffect(() => {
     btnfetch();
     searchBtn();
-  }, []);
-
-  const Next = () => {
-    setIndex((oldIndex) => {
-      let index = oldIndex + 1;
-      if (index > news.length - 1) {
-        index = 0;
-      }
-      return index;
-    });
-    console.log("next");
-  };
-  const Prev = () => {
-    console.log("prev");
-    setIndex((oldIndex) => {
-      let index = oldIndex - 1;
-      if (index < 0) {
-        index = news.length - 1;
-      }
-      return index;
-    });
-  };
+  });
 
   const { creator, description, link, pubDate, title } = news;
   const dateString = pubDate;

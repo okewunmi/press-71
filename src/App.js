@@ -1,26 +1,32 @@
-import { GlobalStyle } from "./GlobalStyle";
-import Header from "./components/Header/index";
-import AllNews from "./components/AllNews/index";
-import World from "./components/World/index";
-import CryptoNews from "./components/Crypto";
-import Contact from "./components/Contact";
-import Travel from "./components/Travel";
-import Footer from "./components/Footer";
+import React from "react";
+import Home from "./HomePage";
 import "./index.css";
-import Politics from "./components/Politics";
-import Business from "./components/Business";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import HealthPage from "./components/Pages/healthPage";
+import BusinessPage from "./components/Pages/BusinessPage";
+import PoliticsPage from "./components/Pages/PoliticsPage";
+import SportPage from "./components/Pages/sportPage";
+import EntainmentPage from "./components/Pages/EntainmentPage";
+import TechnologyPage from "./components/Pages/TechnologyPage";
+
+import { GlobalStyle } from "./GlobalStyle";
+
 function App() {
   return (
     <>
-      <Header />
-      <AllNews />
-      <Business />
-      <CryptoNews />
-      <Politics />
-      <Contact />
-      <Travel />
-      <World />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="Business" element={<BusinessPage />} />
+          <Route path="Entainment" element={<EntainmentPage />} />
+          <Route path="health" element={<HealthPage />} />
+          <Route path="Politics" element={<PoliticsPage />} />
+          <Route path="Sport" element={<SportPage />} />
+          <Route path="Technology" element={<TechnologyPage />} />
+        </Routes>
+      </Router>
       <GlobalStyle />
     </>
   );
